@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Account;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Account\ProfileUpdateRequest;
-use App\Models\Professions\Profession;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
@@ -18,8 +17,7 @@ class ProfileController extends Controller
      */
     public function editProfile(): View
     {
-        $professions = Profession::orderBy('title')->get();
-        return view('profile.update-profile', compact('professions'));
+        return view('profile.update-profile');
     }
 
     /**

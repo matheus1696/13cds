@@ -39,19 +39,6 @@
                             <x-form.input-error :messages="$errors->get('cpf')" class="mt-2" />
                         </div>
                     
-                        <!-- Profissão -->
-                        <div class="mb-4">
-                            <x-form.input-label for="profession_id" :value="__('Profession')" />
-                            <x-form.select name="profession_id">                                
-                                @foreach ($professions as $profession)
-                                    <option value="{{ $profession->id }}" {{ Auth::user()->profession_id === $profession->id ? 'selected' : '' }}>
-                                        {{ $profession->title }}
-                                    </option>
-                                @endforeach
-                            </x-form.select>
-                            <x-form.input-error :messages="$errors->get('profession_id')" class="mt-2" />
-                        </div>
-                    
                         <!-- Botão de Envio -->
                         <div class="mb-4">
                             <x-button.btn-primary type="submit" class="w-full">{{ __("Modify Data") }}</x-button.btn-primary>

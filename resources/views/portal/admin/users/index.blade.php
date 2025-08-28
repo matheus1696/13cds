@@ -39,7 +39,7 @@
                                                 @foreach ($dbPermissions as $permission)
                                                     <div class="flex items-center gap-5">
                                                         <input type="checkbox" id="permission_{{ $permission->id }}_{{ $user->id }}"
-                                                            name="permissions[]" value="{{ $permission->id }}" class="hidden peer"
+                                                            name="permissions[]" value="{{ $permission->name }}" class="hidden peer"
                                                             {{ $user->hasPermissionTo($permission->name) ? 'checked' : '' }}>
                                                         <label for="permission_{{ $permission->id }}_{{ $user->id }}"
                                                             class="flex items-center justify-center w-full px-3 py-1 text-sm font-medium text-gray-700 border rounded-lg cursor-pointer peer-checked:bg-blue-600 peer-checked:text-white peer-checked:border-blue-600 hover:border-blue-600">

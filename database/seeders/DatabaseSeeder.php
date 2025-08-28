@@ -5,6 +5,9 @@ namespace Database\Seeders;
 // use App\Models\User;
 
 use App\Models\User;
+use Database\Seeders\SpatiePermissions\UserPermissionConfigurationSeeder;
+use Database\Seeders\SpatiePermissions\UserPermissionGlobalSeeder;
+use Database\Seeders\SpatiePermissions\UserPermissionUserSeeder;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -16,6 +19,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        if (env('APP_DEBUG') == false) {
+            $this->call([
+                UserPermissionUserSeeder::class,
+                UserPermissionConfigurationSeeder::class,
+                UserPermissionGlobalSeeder::class,
+            ]);
+        } else {
+            $this->call([
+                UserPermissionUserSeeder::class,
+                UserPermissionConfigurationSeeder::class,
+                UserPermissionGlobalSeeder::class,          
+            ]);
+        }
+
         // User::factory(10)->create();
 
         User::create([
@@ -23,13 +40,6 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@example.com',
             'cpf' => '123.456.789-00',
             'password' => Hash::make('password'),
-            'contact' => '123456789',
-        ])->givePermissionTo(['super_admin']);
-
-        if (env('APP_DEBUG') == false) {
-            $this->call([]);            
-        } else {
-            $this->call([]);
-        }
+        ])->assignRole('super_admin');
     }
 }

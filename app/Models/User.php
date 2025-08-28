@@ -26,7 +26,6 @@ class User extends Authenticatable
         'contact',
         'password',
         'cpf',
-        'profession_id',
     ];
 
     /**
