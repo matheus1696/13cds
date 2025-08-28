@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('cpf')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->foreignId('profession_id')->nullable()->constrained('professions')->nullOnDelete();           
             $table->string('contact')->nullable();
             $table->rememberToken();
             $table->timestamps();
