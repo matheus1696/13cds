@@ -10,47 +10,8 @@
 
                 <!-- Navigation Links Desktop -->
                 <div class="hidden lg:-my-px lg:ms-8 lg:flex">
-                    @can('user_students')
-                        <x-menu.nav-dropdown title="Área do Estudante">
-                            <div class="border-r border-gray-200">
-                                <h2 class="font-semibold text-blue-600">Informações</h2>
-                                <div class="py-2 flex flex-col gap-2">
-                                    <x-menu.nav-link :href="route('schedule')" :active="request()->routeIs('schedule')">Cronograma</x-menu.nav-link>
-                                    <x-menu.nav-link :href="route('about')" :active="request()->routeIs('about')">Sobre o Projeto</x-menu.nav-link>
-                                    <x-menu.nav-link :href="route('notifications')" :active="request()->routeIs('notifications')">Avisos</x-menu.nav-link>
-                                </div>
-                            </div>
-                            <div class="border-r border-gray-200">
-                                <h2 class="font-semibold text-blue-600">Atividades</h2>
-                                <div class="py-2 flex flex-col gap-2">
-                                    <x-menu.nav-link :href="route('book-recommendations')" :active="request()->routeIs('book-recommendations')">Indicação de Leitura</x-menu.nav-link>
-                                    <x-menu.nav-link :href="route('reflections.index')" :active="request()->routeIs('reflections.index')">Fichamento</x-menu.nav-link>
-                                    <x-menu.nav-link :href="route('exercises.index')" :active="request()->routeIs('exercises.index')">Atividade Prática</x-menu.nav-link>
-                                </div>
-                            </div>
-                        </x-menu.nav-dropdown>
-                    @endcan                    
 
-                    @can('tutor_evaluate')
-                        <x-menu.nav-dropdown title="Área dos Tutores">
-                            <div class="border-r border-gray-200">
-                                <h2 class="font-semibold text-blue-600">Área de Avaliação</h2>
-                                <div class="py-2 flex flex-col gap-2">
-                                    <x-menu.nav-link :href="route('tutor_evaluation_reflections.index')" :active="request()->routeIs('tutor_evaluation_reflections.index')">Avaliação do Fichamento</x-menu.nav-link>
-                                    <x-menu.nav-link :href="route('tutor_evaluation_exercises.index')" :active="request()->routeIs('tutor_evaluation_exercises.index')">Avaliação do Atividades Prática</x-menu.nav-link>
-                                </div>
-                            </div>
-
-                            <div class="border-r border-gray-200">
-                                <h2 class="font-semibold text-blue-600">Gráficos de Avaliação</h2>
-                                <div class="py-2 flex flex-col gap-2">
-                                    <x-menu.nav-link :href="route('tutor_evaluation_course.index')" :active="request()->routeIs('tutor_evaluation_course.index')">Gráfico de Avaliação do Curso</x-menu.nav-link>
-                                </div>
-                            </div>
-                        </x-menu.nav-dropdown>
-                    @endcan
-                    
-                    @canany(['configuration_users', 'configuration_exercises', 'configuration_reflections','configuration_professions','configuration_evaluations'])
+                    @canany(['configuration_users'])
                         <x-menu.nav-dropdown title="Configurações">
                             @can('configuration_users')
                                 <div class="border-r border-gray-200">
@@ -60,34 +21,7 @@
                                     </div>
                                 </div>
                             @endcan
-                            @canany(['configuration_exercises', 'configuration_reflections','configuration_evaluations','configuration_presential_activity'])                            
-                                <div class="border-r border-gray-200">
-                                    <h2 class="font-semibold text-blue-600">Gestão de Atividades</h2>
-                                    <div class="py-2 flex flex-col gap-2">
-                                        @can('configuration_presential_activity')
-                                            <x-menu.nav-link :href="route('admin_presential_activities.index')" :active="request()->routeIs('admin_presential_activities.index')">Gestão de Encontros</x-menu.nav-link>
-                                        @endcan
-                                        @can('configuration_reflections')
-                                            <x-menu.nav-link :href="route('admin_reflections.index')" :active="request()->routeIs('admin_reflections.index')">Gestão de Fichamentos</x-menu.nav-link>
-                                        @endcan
-                                        @can('configuration_exercises')
-                                            <x-menu.nav-link :href="route('admin_exercises.index')" :active="request()->routeIs('admin_exercises.index')">Gestão de Atividades Práticas</x-menu.nav-link>
-                                        @endcan
-                                        @can('configuration_evaluations')
-                                            <x-menu.nav-link :href="route('evaluations.index')" :active="request()->routeIs('evaluations.index')">Gestão de Avaliações do Curso</x-menu.nav-link>
-                                        @endcan
-                                    </div>
-                                </div>                            
-                            @endcanany
-                            @can('configuration_professions')
-                                <div class="border-r border-gray-200">
-                                    <h2 class="font-semibold text-blue-600">Configuração do Sistema</h2>
-                                    <div class="py-2 flex flex-col gap-2">
-                                        <x-menu.nav-link :href="route('admin_professions.index')" :active="request()->routeIs('admin_professions.index')">Lista de Profissões</x-menu.nav-link>
-                                    </div>
-                                </div>
-                            @endcan
-                        </x-menu.nav-dropdown> 
+                        </x-menu.nav-dropdown>
                     @endcanany
                 </div>
             </div>
@@ -154,58 +88,7 @@
                 <!-- Navigation Links Mobile -->
                 <div class="mt-5 space-y-5 text-sm px-4" x-data="{ openStudent: false, openTutor: false, openConfig: false }">
 
-                    @can('user_students')
-                        <div>
-                            <button @click="openStudent = !openStudent" class="w-full text-left font-semibold text-blue-600">
-                                Área do Estudante
-                            </button>
-                            <div x-show="openStudent" x-transition class="mt-2 space-y-4">
-                                <div>
-                                    <h3 class="font-semibold text-gray-700 mb-2 border-t border-gray-100 pt-3">Informações</h3>
-                                    <div class="mt-1 flex flex-col gap-2">
-                                        <x-menu.nav-link :href="route('schedule')" :active="request()->routeIs('schedule')">Cronograma</x-menu.nav-link>
-                                        <x-menu.nav-link :href="route('about')" :active="request()->routeIs('about')">Sobre o Projeto</x-menu.nav-link>
-                                        <x-menu.nav-link :href="route('notifications')" :active="request()->routeIs('notifications')">Avisos</x-menu.nav-link>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <h3 class="font-semibold text-gray-700 mb-2 border-t border-gray-100 pt-3">Atividades</h3>
-                                    <div class="mt-1 flex flex-col gap-2">
-                                        <x-menu.nav-link :href="route('book-recommendations')" :active="request()->routeIs('book-recommendations')">Indicação de Leitura</x-menu.nav-link>
-                                        <x-menu.nav-link :href="route('reflections.index')" :active="request()->routeIs('reflections.index')">Fichamento</x-menu.nav-link>
-                                        <x-menu.nav-link :href="route('exercises.index')" :active="request()->routeIs('exercises.index')">Atividade Prática</x-menu.nav-link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endcan
-
-                    @can('tutor_evaluate')
-                        <div>
-                            <button @click="openTutor = !openTutor" class="w-full text-left font-semibold text-blue-600">
-                                Área dos Tutores
-                            </button>
-                            <div x-show="openTutor" x-transition class="mt-2 space-y-4">
-                                <div>
-                                    <h3 class="font-semibold text-gray-700 mb-2 border-t border-gray-100 pt-3">Área de Avaliação</h3>
-                                    <div class="mt-1 flex flex-col gap-2">
-                                        <x-menu.nav-link :href="route('tutor_evaluation_reflections.index')" :active="request()->routeIs('tutor_evaluation_reflections.index')">Avaliação do Fichamento</x-menu.nav-link>
-                                        <x-menu.nav-link :href="route('tutor_evaluation_exercises.index')" :active="request()->routeIs('tutor_evaluation_exercises.index')">Avaliação do Atividades Prática</x-menu.nav-link>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <h3 class="font-semibold text-gray-700 mb-2 border-t border-gray-100 pt-3">Gráficos de Avaliações</h3>
-                                    <div class="mt-1 flex flex-col gap-2">
-                                        <x-menu.nav-link :href="route('tutor_evaluation_course.index')" :active="request()->routeIs('tutor_evaluation_course.index')">Avaliação do Curso</x-menu.nav-link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endcan
-
-                    @canany(['configuration_users', 'configuration_exercises', 'configuration_reflections','configuration_professions'])
+                    @canany(['configuration_users'])
                         <div>
                             <button @click="openConfig = !openConfig" class="w-full text-left font-semibold text-blue-600">
                                 Configurações
@@ -215,26 +98,6 @@
                                     <div>
                                         <h3 class="font-semibold text-gray-700 mb-2 border-t border-gray-100 pt-3">Gestão de Usuários</h3>
                                         <x-menu.nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">Lista de Usuário</x-menu.nav-link>
-                                    </div>
-                                @endcan
-                                @canany(['configuration_exercises', 'configuration_reflections'])
-                                    <div>
-                                        <h3 class="font-semibold text-gray-700 mb-2 border-t border-gray-100 pt-3">Gestão de Atividades</h3>
-                                        <div class="mt-1 flex flex-col gap-2">
-                                            @can('configuration_reflections')
-                                                <x-menu.nav-link :href="route('admin_reflections.index')" :active="request()->routeIs('admin_reflections.index')">Gestão de Fichamentos</x-menu.nav-link>
-                                            @endcan
-                                            @can('configuration_exercises')
-                                                <x-menu.nav-link :href="route('admin_exercises.index')" :active="request()->routeIs('admin_exercises.index')">Gestão de Atividades Práticas</x-menu.nav-link>
-                                            @endcan
-                                        </div>
-                                    </div>
-                                @endcanany
-                                
-                                @can('configuration_professions')
-                                    <div>
-                                        <h3 class="font-semibold text-gray-700 mb-2 border-t border-gray-100 pt-3">Configuração do Sistema</h3>
-                                        <x-menu.nav-link :href="route('admin_professions.index')" :active="request()->routeIs('admin_professions.index')">Lista de Profissões</x-menu.nav-link>
                                     </div>
                                 @endcan
                             </div>
