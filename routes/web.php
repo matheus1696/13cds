@@ -6,6 +6,11 @@ use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {return view('public.home'); })->name('home');
+Route::get('/regimento', function () {return view('public.regimento'); })->name('regimento');
+Route::get('/decreto', function () {return view('public.decreto'); })->name('decreto');
+Route::get('/convocatoria', function () {return view('public.convocatoria'); })->name('convocatoria');
+
+
 Route::get('/dashboard', function () {return redirect(route('dashboard.index')); })->name('dashboard');
 
 Route::middleware(['auth', 'verified'])->group(function () {

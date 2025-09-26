@@ -16,6 +16,9 @@ class UserPermissionConfigurationSeeder extends Seeder
     {
         // Configurações
         Permission::create(['name' => 'configuration_users', 'display_name' => 'Configurações Usuários']);
+        Permission::create(['name' => 'configuration_proposeds', 'display_name' => 'Configurações Propostas']);
+        Permission::create(['name' => 'configuration_delegates', 'display_name' => 'Configurações Delegados']);
+        Permission::create(['name' => 'configuration_participants', 'display_name' => 'Configurações Participantes']);
 
         // Criando roles com nomes consistentes
         $configurations = Role::create([
@@ -24,6 +27,6 @@ class UserPermissionConfigurationSeeder extends Seeder
             'description' => 'Permite modificar parâmetros críticos e ajustes que afetam o funcionamento global do sistema.'
         ]);
 
-        $configurations->givePermissionTo(['configuration_users']);
+        $configurations->givePermissionTo(['configuration_users','configuration_proposeds', 'configuration_delegates']);
     }
 }

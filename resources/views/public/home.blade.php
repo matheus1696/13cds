@@ -50,9 +50,7 @@
                 
                 <div class="relative hidden md:block">
                     <div class="bg-green-100 p-8 rounded-2xl shadow-xl">
-                        <img src="{{ asset('assets/img/logo.png') }}" 
-                             alt="Logo da 13ª Conferência Municipal de Saúde de Caruaru" 
-                             class="w-2/3 m-auto h-auto rounded-lg">
+                        <img src="{{ asset('assets/img/logo_full.png') }}" alt="Logo da 13ª Conferência Municipal de Saúde de Caruaru" class="w-2/3 m-auto h-auto rounded-lg">
                     </div>
                     <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-green-600 rounded-full opacity-20"></div>
                     <div class="absolute -top-6 -right-6 w-32 h-32 bg-green-400 rounded-full opacity-10"></div>
@@ -122,14 +120,10 @@
                     </div>
                     
                     <!-- Estatísticas -->
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+                    <div class="grid grid-cols-3 gap-6 mt-8">
                         <div class="text-center p-4">
-                            <div class="text-3xl font-bold text-green-600 mb-2">25+</div>
+                            <div class="text-3xl font-bold text-green-600 mb-2">65+</div>
                             <div class="text-sm text-gray-600">UBS Participantes</div>
-                        </div>
-                        <div class="text-center p-4">
-                            <div class="text-3xl font-bold text-green-600 mb-2">1.200+</div>
-                            <div class="text-sm text-gray-600">Participantes</div>
                         </div>
                         <div class="text-center p-4">
                             <div class="text-3xl font-bold text-green-600 mb-2">150+</div>
@@ -317,21 +311,14 @@
                 <div class="bg-white rounded-2xl shadow-xl p-8">
                     <div id="map" class="h-96 bg-gradient-to-br from-green-100 to-green-200 rounded-lg flex items-center justify-center relative overflow-hidden">
                         <!-- Placeholder do mapa com estilo moderno -->
-                        <div class="text-center z-10">
-                            <i class="fas fa-map-marked-alt text-6xl text-green-600 mb-4" aria-hidden="true"></i>
-                            <p class="text-green-800 font-medium">Mapa interativo da localização</p>
-                            <p class="text-green-700 text-sm">Secretaria de Educação de Caruaru</p>
+                        <div class="text-center z-10 w-full">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.917139413125!2d-35.974366265361226!3d-8.298333301251482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a98bdeaffffff9%3A0xb1a174b1d297c0cb!2sSECRETARIA%20DE%20EDUCA%C3%87%C3%83O%20E%20ESPORTES%20DE%20CARUARU!5e1!3m2!1spt-BR!2sbr!4v1758899525477!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-96"></iframe>
                         </div>
-                        
-                        <!-- Elementos decorativos do mapa -->
-                        <div class="absolute top-4 left-4 w-8 h-8 bg-green-500 rounded-full opacity-20"></div>
-                        <div class="absolute bottom-8 right-8 w-12 h-12 bg-green-400 rounded-full opacity-30"></div>
-                        <div class="absolute top-1/2 left-1/4 w-6 h-6 bg-green-600 rounded-full opacity-40"></div>
                     </div>
                     
                     <!-- Legenda do mapa -->
                     <div class="mt-5">
-                        <a href="#" target="_blank" rel="noopener noreferrer" 
+                        <a href="https://www.google.com/maps?ll=-8.298593,-35.973686&z=20&t=h&hl=pt-BR&gl=BR&mapclient=embed&cid=12799639923054854347" target="_blank" rel="noopener noreferrer" 
                             class="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-green-300">
                             <i class="fas fa-external-link-alt mr-2" aria-hidden="true"></i>
                             Abrir no Google Maps
@@ -342,109 +329,6 @@
         </div>
     </section>
 
-    <!-- Footer Melhorado -->
-    <footer class="bg-green-900 text-white pt-16 pb-8" aria-labelledby="footer-heading">
-        <div class="container mx-auto px-4">
-            <h2 id="footer-heading" class="sr-only">Rodapé</h2>
-            
-            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mb-12">
-                <!-- Logo e descrição -->
-                <div class="col-span-2">
-                    <img src=" {{ asset('assets/img/logo_full_white.png')}} " alt="">
-                </div>
-
-                <!-- Links rápidos -->
-                <div>
-                    <h3 class="text-xl font-bold mb-6 relative pb-2">
-                        Links Rápidos
-                        <div class="absolute bottom-0 left-0 w-12 h-0.5 bg-green-600"></div>
-                    </h3>
-                    <ul class="space-y-3">
-                        <li><a href="#inicio" class="text-green-200 hover:text-white transition-colors block py-1 focus:outline-none focus:text-white">Início</a></li>
-                        <li><a href="#sobre" class="text-green-200 hover:text-white transition-colors block py-1 focus:outline-none focus:text-white">Sobre</a></li>
-                        <li><a href="#pre-conferencias" class="text-green-200 hover:text-white transition-colors block py-1 focus:outline-none focus:text-white">Pré-Conferências</a></li>
-                        <li><a href="#programacao" class="text-green-200 hover:text-white transition-colors block py-1 focus:outline-none focus:text-white">Programação</a></li>
-                        <li><a href="#localizacao" class="text-green-200 hover:text-white transition-colors block py-1 focus:outline-none focus:text-white">Localização</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Contato -->
-                <div>
-                    <h3 class="text-xl font-bold mb-6 relative pb-2">
-                        Contato
-                        <div class="absolute bottom-0 left-0 w-12 h-0.5 bg-green-600"></div>
-                    </h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <i class="fas fa-envelope text-green-400 mt-1 mr-3" aria-hidden="true"></i>
-                            <div>
-                                <span class="block text-green-200 font-medium">E-mail</span>
-                                <a href="mailto:conferenciasaude@caruaru.pe.gov.br" class="text-green-100 hover:text-white transition-colors">
-                                    conferenciasaude@caruaru.pe.gov.br
-                                </a>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-phone text-green-400 mt-1 mr-3" aria-hidden="true"></i>
-                            <div>
-                                <span class="block text-green-200 font-medium">Telefone</span>
-                                <a href="tel:+558112345678" class="text-green-100 hover:text-white transition-colors">
-                                    (81) 1234-5678
-                                </a>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt text-green-400 mt-1 mr-3" aria-hidden="true"></i>
-                            <div>
-                                <span class="block text-green-200 font-medium">Endereço</span>
-                                <span class="text-green-100">Secretaria Municipal de Saúde<br>Caruaru - PE</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Rodapé inferior -->
-            <div class="border-t border-green-800 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-green-400 text-sm mb-4 md:mb-0">
-                        &copy; 2025 Prefeitura Municipal de Caruaru - Secretaria de Saúde. Todos os direitos reservados.
-                    </p>
-                    <div class="flex space-x-6 text-sm text-green-400">
-                        <a href="#" class="hover:text-white transition-colors focus:outline-none focus:text-white">Política de Privacidade</a>
-                        <a href="#" class="hover:text-white transition-colors focus:outline-none focus:text-white">Termos de Uso</a>
-                        <a href="#" class="hover:text-white transition-colors focus:outline-none focus:text-white">Acessibilidade</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Botão de voltar ao topo -->
-    <button id="back-to-top" 
-            class="fixed bottom-8 right-8 bg-green-600 hover:bg-green-700 text-white w-12 h-12 rounded-full shadow-lg transition-all duration-300 opacity-0 invisible focus:outline-none focus:ring-2 focus:ring-green-300 z-40"
-            aria-label="Voltar ao topo">
-        <i class="fas fa-chevron-up" aria-hidden="true"></i>
-    </button>
-
-    <!-- Script para o botão voltar ao topo -->
-    <script>
-        // Botão voltar ao topo
-        const backToTopButton = document.getElementById('back-to-top');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.remove('opacity-0', 'invisible');
-                backToTopButton.classList.add('opacity-100', 'visible');
-            } else {
-                backToTopButton.classList.remove('opacity-100', 'visible');
-                backToTopButton.classList.add('opacity-0', 'invisible');
-            }
-        });
-
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
+    @include('public._partials.footer')
 
 </x-guest-layout>
