@@ -11,6 +11,36 @@
                 <!-- Navigation Links Desktop -->
                 <div class="hidden lg:-my-px lg:ms-8 lg:flex">
 
+                    @canany(['configuration_proposeds'])
+                        <x-menu.nav-dropdown title="Comissão Organizadora">
+                            @can('configuration_proposeds')
+                                <div class="border-r border-gray-200">
+                                    <h2 class="font-semibold text-blue-600">Gestão de Propostas</h2>
+                                    <div class="py-2 flex flex-col gap-2">
+                                        <x-menu.nav-link :href="route('propostas.index')" :active="request()->routeIs('propostas.index')">Lista de Propostas</x-menu.nav-link>
+                                    </div>
+                                </div>
+                            @endcan
+                            @can('configuration_delegates')
+                                <div class="border-r border-gray-200">
+                                    <h2 class="font-semibold text-blue-600">Gestão de Delegados</h2>
+                                    <div class="py-2 flex flex-col gap-2">
+                                        <x-menu.nav-link :href="route('delegados.index')" :active="request()->routeIs('delegados.index')">Lista de Delegados</x-menu.nav-link>
+                                    </div>
+                                </div>
+                            @endcan
+                            @can('configuration_participants')
+                                <div class="border-r border-gray-200">
+                                    <h2 class="font-semibold text-blue-600">Gestão de Participantes</h2>
+                                    <div class="py-2 flex flex-col gap-2">
+                                        <x-menu.nav-link :href="route('participantes.index')" :active="request()->routeIs('participantes.index')">Lista de Participantes</x-menu.nav-link>
+                                        <x-menu.nav-link :href="route('segmentos.index')" :active="request()->routeIs('segmentos.index')">Lista de Segmentos</x-menu.nav-link>
+                                    </div>
+                                </div>
+                            @endcan
+                        </x-menu.nav-dropdown>
+                    @endcanany
+
                     @canany(['configuration_users'])
                         <x-menu.nav-dropdown title="Configurações">
                             @can('configuration_users')

@@ -3,6 +3,10 @@
 use App\Http\Controllers\Admin\User\UserController;
 use App\Http\Controllers\Account\ProfileController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Admin\DelegateController;
+use App\Http\Controllers\Admin\ParticipantController;
+use App\Http\Controllers\Admin\ProposedController;
+use App\Http\Controllers\Admin\SegmentController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {return view('public.home'); })->name('home');
@@ -10,10 +14,9 @@ Route::get('/regimento', function () {return view('public.regimento'); })->name(
 Route::get('/decreto', function () {return view('public.decreto'); })->name('decreto');
 Route::get('/convocatoria', function () {return view('public.convocatoria'); })->name('convocatoria');
 
-
 Route::get('/dashboard', function () {return redirect(route('dashboard.index')); })->name('dashboard');
 
-Route::middleware(['auth', 'verified'])->group(function () {
+Route::middleware(['auth'])->group(function () {
     Route::prefix('portal')->group(function () {
 
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
@@ -28,6 +31,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
             Route::post('configuration/user/store', [UserController::class, 'store'])->name('users.store');
             Route::put('configuration/users/permission/{user}',[UserController::class,'permission'])->name('users.permission');
         });
+
+        Route::resource('propostas', ProposedController::class);
+        Route::resource('delegados', DelegateController::class);
+        Route::resource('participantes', ParticipantController::class);
+        Route::resource('segmentos', SegmentController::class);
     });
 });
 

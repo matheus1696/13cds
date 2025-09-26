@@ -28,7 +28,7 @@
     <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
 
 </head>
-<body class="font-['Open Sans'] antialiased bg-blue-50 select-none">
+<body class="font-['Open Sans'] antialiased bg-green-50 select-none">
 
     <div class="min-h-screen flex flex-col">
         <!-- Navigation -->
