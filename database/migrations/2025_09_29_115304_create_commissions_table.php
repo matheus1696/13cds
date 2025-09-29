@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('participants', function (Blueprint $table) {
+        Schema::create('commissions', function (Blueprint $table) {
             $table->id();
             $table->string('cpf')->nullable()->unique();
             $table->string('name');
-            
-            $table->foreignId('segment_id')->constrained()->onDelete('cascade');
-            
+            $table->string('contact')->nullable();
+            $table->boolean('is_whatsapp')->default(false);
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('participants');
+        Schema::dropIfExists('commissions');
     }
 };

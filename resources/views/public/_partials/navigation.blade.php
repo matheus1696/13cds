@@ -2,15 +2,12 @@
 <nav class="bg-green-700 text-white shadow-lg sticky top-0 z-50" 
      aria-label="Navegação principal" role="navigation">
     <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center py-4">
+        <div class="flex justify-between items-center">
             
             <!-- Logo -->
             <a href="{{ url('/') }}" 
-               class="flex items-center focus:outline-none focus:ring-2 
-                      focus:ring-white focus:ring-offset-2 
-                      focus:ring-offset-green-800 rounded">
-                <i class="fas fa-stethoscope text-2xl mr-3" aria-hidden="true"></i>
-                <h1 class="font-bold text-xl">13º Conferência de Saúde</h1>
+               class="flex items-center focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-green-800 rounded">
+                  <img src="{{ asset('assets/img/logo_full_white.png') }}" alt="" class="w-24">
             </a>
             
             <!-- Menu desktop -->

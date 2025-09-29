@@ -2,10 +2,8 @@
     <div class="bg-green-50 min-h-screen flex flex-col items-center justify-center px-10 py-16">
         
         <!-- Cabeçalho estilo documentos -->
-        <div class="text-center mb-6">
-            <span class="text-green-600 font-semibold uppercase tracking-wider text-sm mb-2 block">Acesso ao Sistema</span>
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Faça login na sua conta</h1>
-            <div class="w-24 h-1 bg-green-600 mx-auto mb-4"></div>
+        <div class="text-center">
+            <img src="{{ asset('assets/img/logo_full.png') }}" alt="" class="w-40">
         </div>
 
         <!-- Card Login -->
@@ -17,7 +15,7 @@
                 <!-- Email Address -->
                 <div class="mb-6">
                     <x-form.input-label for="email" :value="__('Email')" />
-                    <x-form.input id="email" type="email" name="email" :value="old('email')" required autofocus placeholder="seuemail@qmulti.com.br"/>
+                    <x-form.input id="email" type="email" name="email" :value="old('email')" required autofocus placeholder="seuemail@saudecaruaru.pe.gov.br"/>
                     <x-form.input-error :messages="$errors->get('email')" class="mt-2" />
                 </div>
 
@@ -41,7 +39,7 @@
         </div>
         
         <!-- Footer / Créditos -->
-        <p class="pt-8 text-center text-[10px] text-gray-400 uppercase tracking-wider">
+        <p class="pt-4 text-center text-[10px] text-gray-400 uppercase tracking-wider">
             <span>{{ config('app.name', 'Laravel') }} © {{ now()->year }} - V {{ config('app.version') }}</span> - 
             <span>Desenvolvido por <a href="https://webxperts.com.br" target="_blank" class="hover:text-blue-500">Webxperts</a></span>
         </p>

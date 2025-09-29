@@ -32,10 +32,9 @@ Route::middleware(['auth'])->group(function () {
             Route::put('configuration/users/permission/{user}',[UserController::class,'permission'])->name('users.permission');
         });
 
-        Route::resource('propostas', ProposedController::class);
-        Route::resource('delegados', DelegateController::class);
+        Route::resource('proposeds', ProposedController::class);
+        Route::resource('delegates', DelegateController::class);
         Route::resource('participantes', ParticipantController::class);
-        Route::resource('segmentos', SegmentController::class);
     });
 });
 

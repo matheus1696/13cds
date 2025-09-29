@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Admin\Segment;
+use App\Models\Admin\Listerner;
+use App\Http\Requests\StoreListernerRequest;
+use App\Http\Requests\UpdateListernerRequest;
 
-class SegmentController extends Controller
+class ListernerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +28,7 @@ class SegmentController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreSegmentRequest $request)
+    public function store(StoreListernerRequest $request)
     {
         //
     }
@@ -34,7 +36,7 @@ class SegmentController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Segment $segment)
+    public function show(Listerner $listerner)
     {
         //
     }
@@ -42,7 +44,7 @@ class SegmentController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Segment $segment)
+    public function edit(Listerner $listerner)
     {
         //
     }
@@ -50,7 +52,7 @@ class SegmentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateSegmentRequest $request, Segment $segment)
+    public function update(UpdateListernerRequest $request, Listerner $listerner)
     {
         //
     }
@@ -58,7 +60,7 @@ class SegmentController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Segment $segment)
+    public function destroy(Listerner $listerner)
     {
         //
     }

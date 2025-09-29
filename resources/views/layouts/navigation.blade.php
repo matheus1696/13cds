@@ -15,26 +15,17 @@
                         <x-menu.nav-dropdown title="Comissão Organizadora">
                             @can('configuration_proposeds')
                                 <div class="border-r border-gray-200">
-                                    <h2 class="font-semibold text-blue-600">Gestão de Propostas</h2>
+                                    <h2 class="font-semibold text-green-700">Gestão de Propostas</h2>
                                     <div class="py-2 flex flex-col gap-2">
-                                        <x-menu.nav-link :href="route('propostas.index')" :active="request()->routeIs('propostas.index')">Lista de Propostas</x-menu.nav-link>
+                                        <x-menu.nav-link :href="route('proposeds.index')" :active="request()->routeIs('proposeds.index')">Lista de Propostas</x-menu.nav-link>
                                     </div>
                                 </div>
                             @endcan
                             @can('configuration_delegates')
                                 <div class="border-r border-gray-200">
-                                    <h2 class="font-semibold text-blue-600">Gestão de Delegados</h2>
+                                    <h2 class="font-semibold text-green-700">Gestão de Delegados</h2>
                                     <div class="py-2 flex flex-col gap-2">
-                                        <x-menu.nav-link :href="route('delegados.index')" :active="request()->routeIs('delegados.index')">Lista de Delegados</x-menu.nav-link>
-                                    </div>
-                                </div>
-                            @endcan
-                            @can('configuration_participants')
-                                <div class="border-r border-gray-200">
-                                    <h2 class="font-semibold text-blue-600">Gestão de Participantes</h2>
-                                    <div class="py-2 flex flex-col gap-2">
-                                        <x-menu.nav-link :href="route('participantes.index')" :active="request()->routeIs('participantes.index')">Lista de Participantes</x-menu.nav-link>
-                                        <x-menu.nav-link :href="route('segmentos.index')" :active="request()->routeIs('segmentos.index')">Lista de Segmentos</x-menu.nav-link>
+                                        <x-menu.nav-link :href="route('delegates.index')" :active="request()->routeIs('delegates.index')">Lista de Delegados</x-menu.nav-link>
                                     </div>
                                 </div>
                             @endcan
@@ -45,7 +36,7 @@
                         <x-menu.nav-dropdown title="Configurações">
                             @can('configuration_users')
                                 <div class="border-r border-gray-200">
-                                    <h2 class="font-semibold text-blue-600">Gestão de Usuários</h2>
+                                    <h2 class="font-semibold text-green-700">Gestão de Usuários</h2>
                                     <div class="py-2 flex flex-col gap-2">
                                         <x-menu.nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">Lista de Usuário</x-menu.nav-link>
                                     </div>
@@ -87,7 +78,7 @@
                         <!-- Authentication -->
                        <form method="POST" action="{{ route('logout') }}" class="cursor-pointer">
                             @csrf
-                            <a href="{{ route('logout') }}" class="block px-4 py-2 text-sm hover:font-medium text-blue-600 hover:bg-blue-100" onclick="event.preventDefault(); this.closest('form').submit();">Sair</a>
+                            <a href="{{ route('logout') }}" class="block px-4 py-2 text-sm hover:font-medium text-green-700 hover:bg-green-700" onclick="event.preventDefault(); this.closest('form').submit();">Sair</a>
                         </form>
                     </div>
                 </div>
@@ -97,7 +88,7 @@
             
             <!-- Botão do Menu Hamburguer -->
             <div class="flex lg:hidden items-center ms-6">
-                <button @click="openMain = true" class="size-8 bg-blue-500 text-white rounded-md">
+                <button @click="openMain = true" class="size-8 bg-green-700 text-white rounded-md">
                     ☰
                 </button>
             </div>
@@ -120,7 +111,7 @@
 
                     @canany(['configuration_users'])
                         <div>
-                            <button @click="openConfig = !openConfig" class="w-full text-left font-semibold text-blue-600">
+                            <button @click="openConfig = !openConfig" class="w-full text-left font-semibold text-green-700">
                                 Configurações
                             </button>
                             <div x-show="openConfig" x-transition class="mt-2 space-y-4">

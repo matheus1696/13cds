@@ -11,20 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('delegates', function (Blueprint $table) {
+        Schema::create('listerners', function (Blueprint $table) {
             $table->id();
             $table->string('cpf')->nullable()->unique();
             $table->string('name');
-            $table->string('name_filter');
             $table->string('contact')->nullable();
             $table->boolean('is_whatsapp')->default(false);
-            $table->string('origin')->nullable();
-            $table->unsignedInteger('votes_count')->default(0);
-            $table->enum('type', ['Eleito', 'Suplente', 'Não Eleito'])->default('Não Eleito');
-            $table->boolean('participated')->default(false);
-            
-            $table->foreignId('segment_id')->constrained();
-            
             $table->timestamps();
         });
     }
@@ -34,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('delegates');
+        Schema::dropIfExists('listerners');
     }
 };

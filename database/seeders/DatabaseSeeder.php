@@ -24,12 +24,14 @@ class DatabaseSeeder extends Seeder
                 UserPermissionUserSeeder::class,
                 UserPermissionConfigurationSeeder::class,
                 UserPermissionGlobalSeeder::class,
+                SegmentSeeder::class,
             ]);
         } else {
             $this->call([
                 UserPermissionUserSeeder::class,
                 UserPermissionConfigurationSeeder::class,
-                UserPermissionGlobalSeeder::class,          
+                UserPermissionGlobalSeeder::class,  
+                SegmentSeeder::class,        
             ]);
         }
 

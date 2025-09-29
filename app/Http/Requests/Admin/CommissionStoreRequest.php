@@ -4,14 +4,14 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ProposedUpdateRequest extends FormRequest
+class CommissionStoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      */
     public function authorize(): bool
     {
-        return true;
+        return false;
     }
 
     /**
@@ -22,11 +22,7 @@ class ProposedUpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['required', 'string', 'max:255'],
-            'description' => ['required', 'string'],
-            'origin' => ['nullable', 'string', 'max:255'],
-            'votes_count' => ['nullable', 'integer', 'min:0'],
-            'type' => ['required', 'in:Eleita,Não Eleita'],
+            //
         ];
     }
 }

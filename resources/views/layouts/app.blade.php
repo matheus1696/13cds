@@ -34,17 +34,20 @@
         <!-- Navigation -->
         @include('layouts.navigation')
 
-        <!-- Page Heading -->
-        @isset($header)
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 font-['Figtree'] text-gray-900">
-                    {{ $header }}
-                </div>
-            </header>
-        @endisset
+        
 
         <!-- Page Content -->
-        <main class="flex-1">
+        <main class="flex-1 px-5">
+
+            <!-- Page Heading -->
+            @isset($header)
+                <header>
+                    <div class="max-w-7xl mx-auto pt-14">
+                        {{ $header }}
+                    </div>
+                </header>
+            @endisset
+            
             {{ $slot }}
         </main>
     </div>

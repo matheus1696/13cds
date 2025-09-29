@@ -11,7 +11,7 @@ class ProposedStoreRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,11 @@ class ProposedStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title' => ['required', 'string', 'max:255'],
+            'description' => ['required', 'string'],
+            'origin' => ['nullable', 'string', 'max:255'],
+            'votes_count' => ['nullable', 'integer', 'min:0'],
+            'type' => ['required', 'in:Eleita,Não Eleita'],
         ];
     }
 }

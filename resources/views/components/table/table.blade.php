@@ -1,6 +1,6 @@
 <div class="overflow-x-auto bg-white shadow-lg rounded-lg">
     <table class="min-w-full table-auto">
-        <thead class="bg-blue-600 text-center text-sm text-white tracking-wide">
+        <thead class="bg-green-700 text-center text-sm text-white tracking-wide">
             {{ $thead }}
         </thead>
     

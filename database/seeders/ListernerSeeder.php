@@ -2,11 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Admin\Segment;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class SegmentSeeder extends Seeder
+class ListernerSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,8 +13,7 @@ class SegmentSeeder extends Seeder
     public function run(): void
     {
         //
-        Segment::create(['name' => 'Usuário']);
-        Segment::create(['name' => 'Gestão']);
-        Segment::create(['name' => 'Trabalhador']);
+
+        
     }
 }

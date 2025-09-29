@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('proposals', function (Blueprint $table) {
+        Schema::create('proposeds', function (Blueprint $table) {
             $table->id();
             $table->string('title'); // Resumo da proposta
             $table->text('description'); // Conteúdo completo da proposta
+            $table->string('origin')->nullable();
             $table->unsignedInteger('votes_count')->default(0); // Quantidade de Votos
-            $table->boolean('elected')->default(false); // Se foi eleita
+            $table->enum('type', ['Eleita', 'Não Eleita'])->default('Não Eleita');
             $table->timestamps();
         });
-
     }
 
     /**

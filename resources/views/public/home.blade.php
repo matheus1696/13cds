@@ -27,7 +27,7 @@
                             para a formulação da política de saúde nos próximos anos, garantindo a participação social na gestão do SUS.
                         </p>
                         
-                        <div class="bg-green-50 border-l-4 border-green-600 p-6 rounded-r-lg">
+                        <div class="bg-green-100 border-l-4 border-green-600 p-6 rounded-r-lg">
                             <p class="text-green-800 font-medium">
                                 Participe desta importante discussão e ajude a construir um SUS que realmente acolhe, integra e cuida da população de Caruaru.
                             </p>
@@ -35,12 +35,12 @@
                     </div>
                     
                     <div class="mt-8 grid grid-cols-2 gap-4">
-                        <div class="text-center p-4 bg-green-50 rounded-lg">
+                        <div class="text-center p-4 bg-green-100 rounded-lg">
                             <i class="fas fa-users text-3xl text-green-600 mb-2" aria-hidden="true"></i>
                             <h4 class="font-bold text-gray-900">Participação Popular</h4>
                             <p class="text-sm text-gray-600">Envolvimento da comunidade</p>
                         </div>
-                        <div class="text-center p-4 bg-green-50 rounded-lg">
+                        <div class="text-center p-4 bg-green-100 rounded-lg">
                             <i class="fas fa-heartbeat text-3xl text-green-600 mb-2" aria-hidden="true"></i>
                             <h4 class="font-bold text-gray-900">Saúde Pública</h4>
                             <p class="text-sm text-gray-600">Fortalecimento do SUS</p>
@@ -60,7 +60,7 @@
     </section>
 
     <!-- Pré-Conferências Melhorado -->
-    <section id="pre-conferencias" class="py-20 bg-green-50" aria-labelledby="pre-conferencias-title">
+    <section id="pre-conferencias" class="py-20 bg-green-100" aria-labelledby="pre-conferencias-title">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <span class="text-green-600 font-semibold uppercase tracking-wider text-sm mb-2 block">Etapas Preparatórias</span>
@@ -169,7 +169,7 @@
                             <div class="w-4 h-4 bg-green-600 rounded-full mt-2 group-hover:scale-125 transition-transform" aria-hidden="true"></div>
                             <div class="w-0.5 h-full bg-green-300 mt-2" aria-hidden="true"></div>
                         </div>
-                        <div class="flex-1 bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow group-hover:bg-green-100">
+                        <div class="flex-1 bg-green-100 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow group-hover:bg-green-100">
                             <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                                 <h4 class="font-bold text-xl text-green-900">8h - Credenciamento e Café de Boas-Vindas</h4>
                                 <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium mt-2 md:mt-0">Início</span>
@@ -183,7 +183,7 @@
                             <div class="w-4 h-4 bg-green-600 rounded-full mt-2 group-hover:scale-125 transition-transform" aria-hidden="true"></div>
                             <div class="w-0.5 h-full bg-green-300 mt-2" aria-hidden="true"></div>
                         </div>
-                        <div class="flex-1 bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow group-hover:bg-green-100">
+                        <div class="flex-1 bg-green-100 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow group-hover:bg-green-100">
                             <h4 class="font-bold text-xl text-green-900 mb-3">9h - Abertura Oficial</h4>
                             <p class="text-gray-700">Cerimônia de abertura com falas das autoridades e apresentação cultural</p>
                         </div>
@@ -194,7 +194,7 @@
                             <div class="w-4 h-4 bg-green-600 rounded-full mt-2 group-hover:scale-125 transition-transform" aria-hidden="true"></div>
                             <div class="w-0.5 h-full bg-green-300 mt-2" aria-hidden="true"></div>
                         </div>
-                        <div class="flex-1 bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow group-hover:bg-green-100">
+                        <div class="flex-1 bg-green-100 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow group-hover:bg-green-100">
                             <h4 class="font-bold text-xl text-green-900 mb-3">10h - Painel: "O SUS que acolhe, integra e cuida"</h4>
                             <p class="text-gray-700">Discussão sobre os desafios e avanços do SUS em Caruaru com especialistas e gestores</p>
                         </div>
@@ -216,7 +216,7 @@
                             <div class="w-4 h-4 bg-green-600 rounded-full mt-2 group-hover:scale-125 transition-transform" aria-hidden="true"></div>
                             <div class="w-0.5 h-full bg-green-300 mt-2" aria-hidden="true"></div>
                         </div>
-                        <div class="flex-1 bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow group-hover:bg-green-100">
+                        <div class="flex-1 bg-green-100 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow group-hover:bg-green-100">
                             <h4 class="font-bold text-xl text-green-900 mb-3">14h - Grupos de Trabalho Temáticos</h4>
                             <p class="text-gray-700">Discussão em grupos sobre eixos temáticos específicos da saúde pública</p>
                         </div>
@@ -248,7 +248,7 @@
     </section>
 
     <!-- Localização Melhorada -->
-    <section id="localizacao" class="py-20 bg-green-50" aria-labelledby="localizacao-title">
+    <section id="localizacao" class="py-20 bg-green-100" aria-labelledby="localizacao-title">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <span class="text-green-600 font-semibold uppercase tracking-wider text-sm mb-2 block">Onde Será</span>
@@ -258,52 +258,50 @@
             
             <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
                 <!-- Informações -->
-                <div>
-                    <div class="bg-white rounded-2xl shadow-xl p-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                            <i class="fas fa-map-marker-alt text-green-600 mr-3" aria-hidden="true"></i>
-                            Secretaria de Educação de Caruaru
-                        </h3>
-                        
-                        <div class="space-y-4 mb-8">
-                            <div class="flex items-start">
-                                <i class="fas fa-map-pin text-green-600 mt-1 mr-3" aria-hidden="true"></i>
-                                <div>
-                                    <p class="font-medium text-gray-900">Endereço:</p>
-                                    <p class="text-gray-700">Av. Cícero José Dutra, S/N - Petrópolis, Caruaru - PE</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <i class="fas fa-clock text-green-600 mt-1 mr-3" aria-hidden="true"></i>
-                                <div>
-                                    <p class="font-medium text-gray-900">Horário:</p>
-                                    <p class="text-gray-700">08 de Outubro de 2025, das 8h às 17h</p>
-                                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-map-marker-alt text-green-600 mr-3" aria-hidden="true"></i>
+                        Secretaria de Educação de Caruaru
+                    </h3>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-pin text-green-600 mt-1 mr-3" aria-hidden="true"></i>
+                            <div>
+                                <p class="font-medium text-gray-900">Endereço:</p>
+                                <p class="text-gray-700">Av. Cícero José Dutra, S/N - Petrópolis, Caruaru - PE</p>
                             </div>
                         </div>
                         
-                        <!-- Como chegar -->
-                        <div class="bg-green-50 rounded-lg p-6 mb-6">
-                            <h4 class="font-bold text-lg text-green-900 mb-4 flex items-center">
-                                <i class="fas fa-directions text-green-600 mr-2" aria-hidden="true"></i>
-                                Como chegar:
-                            </h4>
-                            <ul class="space-y-3 text-gray-700">
-                                <li class="flex items-start">
-                                    <i class="fas fa-bus text-green-600 mt-1 mr-3" aria-hidden="true"></i>
-                                    <span><strong>Ônibus:</strong> Linhas 101, 205 e 305 - Ponto em frente ao local</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-car text-green-600 mt-1 mr-3" aria-hidden="true"></i>
-                                    <span><strong>Estacionamento:</strong> Amplo estacionamento gratuito disponível no local</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-wheelchair text-green-600 mt-1 mr-3" aria-hidden="true"></i>
-                                    <span><strong>Acessibilidade:</strong> Totalmente acessível para pessoas com deficiência</span>
-                                </li>
-                            </ul>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-green-600 mt-1 mr-3" aria-hidden="true"></i>
+                            <div>
+                                <p class="font-medium text-gray-900">Horário:</p>
+                                <p class="text-gray-700">08 de Outubro de 2025, das 8h às 17h</p>
+                            </div>
                         </div>
+                    </div>
+                    
+                    <!-- Como chegar -->
+                    <div class="bg-green-100 rounded-lg p-6 mb-6">
+                        <h4 class="font-bold text-lg text-green-900 mb-4 flex items-center">
+                            <i class="fas fa-directions text-green-600 mr-2" aria-hidden="true"></i>
+                            Como chegar:
+                        </h4>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-bus text-green-600 mt-1 mr-3" aria-hidden="true"></i>
+                                <span><strong>Ônibus:</strong> Linhas 104 - Ponto em frente ao local.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-car text-green-600 mt-1 mr-3" aria-hidden="true"></i>
+                                <span><strong>Van:</strong> Saída da Secretaria de Saúde as 8 horas.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-wheelchair text-green-600 mt-1 mr-3" aria-hidden="true"></i>
+                                <span><strong>Acessibilidade:</strong> Totalmente acessível para pessoas com deficiência.</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 
