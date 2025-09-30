@@ -11,24 +11,19 @@
                 <!-- Navigation Links Desktop -->
                 <div class="hidden lg:-my-px lg:ms-8 lg:flex">
 
-                    @canany(['configuration_proposeds'])
+                    @canany(['configuration_proposeds', 'configuration_delegates'])
                         <x-menu.nav-dropdown title="Comissão Organizadora">
-                            @can('configuration_proposeds')
-                                <div class="border-r border-gray-200">
-                                    <h2 class="font-semibold text-green-700">Gestão de Propostas</h2>
-                                    <div class="py-2 flex flex-col gap-2">
-                                        <x-menu.nav-link :href="route('proposeds.index')" :active="request()->routeIs('proposeds.index')">Lista de Propostas</x-menu.nav-link>
-                                    </div>
-                                </div>
-                            @endcan
-                            @can('configuration_delegates')
-                                <div class="border-r border-gray-200">
-                                    <h2 class="font-semibold text-green-700">Gestão de Delegados</h2>
-                                    <div class="py-2 flex flex-col gap-2">
+                            <div class="border-r border-gray-200">
+                                <h2 class="font-semibold text-green-700">Gestão</h2>
+                                <div class="py-2 flex flex-col gap-2">
+                                    @can('configuration_delegates')
                                         <x-menu.nav-link :href="route('delegates.index')" :active="request()->routeIs('delegates.index')">Lista de Delegados</x-menu.nav-link>
-                                    </div>
+                                    @endcan
+                                    @can('configuration_proposeds')
+                                        <x-menu.nav-link :href="route('proposeds.index')" :active="request()->routeIs('proposeds.index')">Lista de Propostas</x-menu.nav-link>
+                                    @endcan
                                 </div>
-                            @endcan
+                            </div>
                         </x-menu.nav-dropdown>
                     @endcanany
 

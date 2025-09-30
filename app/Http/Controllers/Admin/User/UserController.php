@@ -7,37 +7,39 @@ use App\Http\Requests\Admin\User\UserStoreRequest;
 use App\Mail\FirstAccessMail;
 use App\Models\User;
 use App\Models\User\Permission;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\View\View;
 
 class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): View
     {
         //
         $users = User::orderBy('name')->get();
         $dbPermissions = Permission::all();
 
-        return view('portal.admin.users.index', compact('users', 'dbPermissions'));
+        return view('admin.users.index', compact('users', 'dbPermissions'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(): View
     {
         //
-        return view('portal.admin.users.create');
+        return view('admin.users.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(UserStoreRequest $request)
+    public function store(UserStoreRequest $request): RedirectResponse
     {
         //
         $user = User::create([
@@ -57,7 +59,7 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function permission(Request $request, User $user)
+    public function permission(Request $request, User $user): RedirectResponse
     {
         // Valida as permissões enviadas
         $validated = $request->validate([

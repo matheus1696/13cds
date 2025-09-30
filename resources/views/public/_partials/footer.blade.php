@@ -1,12 +1,12 @@
 <!-- Footer Melhorado e Compacto -->
-<footer class="bg-green-900 text-white pt-10" aria-labelledby="footer-heading">
+<footer class="bg-green-900 text-white" aria-labelledby="footer-heading">
     <div class="container mx-auto px-4">
         <h2 id="footer-heading" class="sr-only">Rodapé</h2>
         
-        <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 text-center lg:text-start">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 text-center lg:text-start py-10">
             <!-- Logo e descrição -->
             <div class="lg:col-span-2 flex items-center justify-center text-center">
-                <img src="{{ asset('assets/img/logo_full_white.png')}}" alt="Logomarca da 13ª Conferência Municipal de Saúde" class="mb-4 w-52">
+                <img src="{{ asset('assets/img/logotipo_full_white.png')}}" alt="Logomarca da 13ª Conferência Municipal de Saúde" class="mb-4 w-52">
             </div>
 
             <!-- Acessos rápidos -->

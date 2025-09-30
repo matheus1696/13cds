@@ -14,24 +14,6 @@
 
             <!-- Regimento Content -->
             <div class="max-w-7xl mx-auto overflow-hidden">
-                
-                <!-- Document Header -->
-                <div class="bg-green-50 border-l-4 border-r border-y border-green-600 p-6 rounded-r-lg">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
-                        <div>
-                            <h2 class="text-2xl font-bold text-green-800">XIII CONFERÊNCIA MUNICIPAL DE SAÚDE DE CARUARU</h2>
-                            <p class="text-green-700">Documento aprovado pela Comissão Organizadora</p>
-                        </div>
-                        <div class="mt-4 md:mt-0">
-                            <a href="{{ asset('assets/docs/regimento.pdf') }}" 
-                            download="Regimento_XIII_Conferencia_Saude_Caruaru.pdf"
-                            class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-flex items-center">
-                                <i class="fas fa-download mr-2"></i>
-                                Baixar PDF
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="p-8 space-y-12">
                     
@@ -293,6 +275,24 @@
                             <p>
                                 <strong>Art. 18</strong> - Os casos omissos serão resolvidos pela Comissão Organizadora do evento.
                             </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Document Header -->
+                <div class="bg-green-50 border-l-4 border-r border-y border-green-600 p-6 rounded-r-lg">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                        <div>
+                            <h2 class="text-2xl font-bold text-green-800">Regimento - XIII CONFERÊNCIA MUNICIPAL DE SAÚDE DE CARUARU</h2>
+                            <p class="text-green-700">Documento aprovado pela Comissão Organizadora</p>
+                        </div>
+                        <div class="mt-4 md:mt-0">
+                            <a href="{{ asset('assets/docs/regimento.pdf') }}" 
+                            download="Regimento_XIII_Conferencia_Municipal_Saude_Caruaru.pdf"
+                            class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-flex items-center">
+                                <i class="fas fa-download mr-2"></i>
+                                Baixar PDF
+                            </a>
                         </div>
                     </div>
                 </div>

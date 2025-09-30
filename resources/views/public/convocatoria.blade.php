@@ -15,24 +15,6 @@
             <!-- Convocatória Content -->
             <div class="max-w-7xl mx-auto overflow-hidden">
 
-                <!-- Document Header -->
-                <div class="bg-green-50 border-l-4 border-r border-y border-green-600 p-6 rounded-r-lg mb-12">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
-                        <div>
-                            <h2 class="text-2xl font-bold text-green-800">CONVOCATÓRIA 13ª Conferencia Municipal de Saúde de Caruaru</h2>
-                            <p class="text-green-700">Consenho Municipal de Seude de Caruaru - Estado de Pernambuco</p>
-                        </div>
-                        <div class="mt-4 md:mt-0">
-                            <a href="{{ asset('assets/docs/convocatoria.pdf') }}" 
-                               download="convocatoria_13_CMSC_Caruaru.pdf"
-                               class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-flex items-center">
-                                <i class="fas fa-download mr-2"></i>
-                                Baixar PDF
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Texto da Convocatória -->
                 <div class="prose prose-lg max-w-none text-gray-700 space-y-6 mb-12">
                     <p>
@@ -44,6 +26,24 @@
                         <p class="text-blue-700">
                             As atividades preparatórias tiveram início com as Pré-Conferências Temáticas, nos dias 1 e 2 de agosto de 2025, seguindo com as Pré-Conferências Regionais (UBS - Unidades Básicas de Saúde e Centro de Saúde, entre os dias 01 e 19) e se concluindo com as Pré-Conferências Territoriais, dos dias 22 a 28 de setembro, que reunirão 09 grupos formados nas etapas anteriores, correspondendo aos 08 Territórios de Gestão do Sistema de Saúde (TGS), momento em que serão eleitos de forma amplamente participativa as delegadas e os delegados que irão representar os segmentos Usuários do SUS e Trabalhadores da Saúde na 13ª Conferência Municipal de Saúde de Caruaru-PE.
                         </p>
+                    </div>
+                </div>
+
+                <!-- Document Header -->
+                <div class="bg-green-50 border-l-4 border-r border-y border-green-600 p-6 rounded-r-lg mb-12">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                        <div>
+                            <h2 class="text-2xl font-bold text-green-800">CONVOCATÓRIA 13ª Conferencia Municipal de Saúde de Caruaru</h2>
+                            <p class="text-green-700">Consenho Municipal de Seude de Caruaru - Estado de Pernambuco</p>
+                        </div>
+                        <div class="mt-4 md:mt-0">
+                            <a href="{{ asset('assets/docs/convocatoria.pdf') }}" 
+                               download="convocatoria_XIII_Conferencia_Municipal_Saude_Caruaru.pdf"
+                               class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-flex items-center">
+                                <i class="fas fa-download mr-2"></i>
+                                Baixar PDF
+                            </a>
+                        </div>
                     </div>
                 </div>
 

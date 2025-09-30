@@ -50,7 +50,7 @@
                 
                 <div class="relative hidden md:block">
                     <div class="bg-green-100 p-8 rounded-2xl shadow-xl">
-                        <img src="{{ asset('assets/img/logo_full.png') }}" alt="Logo da 13ª Conferência Municipal de Saúde de Caruaru" class="w-2/3 m-auto h-auto rounded-lg">
+                        <img src="{{ asset('assets/img/logotipo.png') }}" alt="Logo da 13ª Conferência Municipal de Saúde de Caruaru" class="w-2/3 m-auto h-auto rounded-lg">
                     </div>
                     <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-green-600 rounded-full opacity-20"></div>
                     <div class="absolute -top-6 -right-6 w-32 h-32 bg-green-400 rounded-full opacity-10"></div>

@@ -4,20 +4,22 @@ use App\Http\Controllers\Admin\User\UserController;
 use App\Http\Controllers\Account\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Admin\DelegateController;
-use App\Http\Controllers\Admin\ParticipantController;
 use App\Http\Controllers\Admin\ProposedController;
-use App\Http\Controllers\Admin\SegmentController;
+use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {return view('public.home'); })->name('home');
-Route::get('/regimento', function () {return view('public.regimento'); })->name('regimento');
-Route::get('/decreto', function () {return view('public.decreto'); })->name('decreto');
-Route::get('/convocatoria', function () {return view('public.convocatoria'); })->name('convocatoria');
+Route::get('/', [PublicController::class, 'home'])->name('home');
+Route::get('/regimento', [PublicController::class, 'regimento'])->name('regimento');
+Route::get('/decreto', [PublicController::class, 'decreto'])->name('decreto');
+Route::get('/convocatoria', [PublicController::class, 'convocatoria'])->name('convocatoria');
+Route::get('/programacao', [PublicController::class, 'programacao'])->name('programacao');
+Route::get('/delegados', [PublicController::class, 'delegados'])->name('delegados');
+Route::get('/propostas', [PublicController::class, 'propostas'])->name('propostas');
 
 Route::get('/dashboard', function () {return redirect(route('dashboard.index')); })->name('dashboard');
 
 Route::middleware(['auth'])->group(function () {
-    Route::prefix('portal')->group(function () {
+    Route::prefix('cms')->group(function () {
 
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
     
@@ -32,9 +34,8 @@ Route::middleware(['auth'])->group(function () {
             Route::put('configuration/users/permission/{user}',[UserController::class,'permission'])->name('users.permission');
         });
 
-        Route::resource('proposeds', ProposedController::class);
-        Route::resource('delegates', DelegateController::class);
-        Route::resource('participantes', ParticipantController::class);
+        Route::resource('proposeds', ProposedController::class)->middleware('can:configuration_proposeds');
+        Route::resource('delegates', DelegateController::class)->middleware('can:configuration_delegates');
     });
 });
 

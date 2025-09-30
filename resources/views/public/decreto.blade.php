@@ -15,24 +15,6 @@
             <!-- Decreto Content -->
             <div class="max-w-7xl mx-auto overflow-hidden">
 
-                <!-- Document Header -->
-                <div class="bg-green-50 border-l-4 border-r border-y border-green-600 p-6 rounded-r-lg mb-12">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
-                        <div>
-                            <h2 class="text-2xl font-bold text-green-800">DECRETO Nº 100, DE 11 DE SETEMBRO DE 2025</h2>
-                            <p class="text-green-700">Prefeitura Municipal de Caruaru - Estado de Pernambuco</p>
-                        </div>
-                        <div class="mt-4 md:mt-0">
-                            <a href="{{ asset('assets/docs/decreto.pdf') }}" 
-                               download="Decreto_100_2025_Conferencia_Saude_Caruaru.pdf"
-                               class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-flex items-center">
-                                <i class="fas fa-download mr-2"></i>
-                                Baixar PDF
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Preâmbulo -->
                 <div class="prose prose-lg max-w-none text-gray-700 space-y-6 mb-12">
                     <p>
@@ -110,6 +92,24 @@
                             <h4 class="font-medium text-gray-700 mb-2">Vigência</h4>
                             <p class="text-gray-600">A partir de 11 de setembro de 2025</p>
                             <p class="text-gray-600">Decreto nº 100/2025</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document Header -->
+                <div class="bg-green-50 border-l-4 border-r border-y border-green-600 p-6 rounded-r-lg mb-12">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                        <div>
+                            <h2 class="text-2xl font-bold text-green-800">DECRETO Nº 100, DE 11 DE SETEMBRO DE 2025</h2>
+                            <p class="text-green-700">Prefeitura Municipal de Caruaru - Estado de Pernambuco</p>
+                        </div>
+                        <div class="mt-4 md:mt-0">
+                            <a href="{{ asset('assets/docs/decreto.pdf') }}" 
+                               download="Decreto_100_2025_XIII_Conferencia_Municipal_Saude_Caruaru.pdf"
+                               class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-flex items-center">
+                                <i class="fas fa-download mr-2"></i>
+                                Baixar PDF
+                            </a>
                         </div>
                     </div>
                 </div>
