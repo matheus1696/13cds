@@ -29,7 +29,7 @@ Siga os passos abaixo para instalar e configurar o sistema:
 1. **Clone o repositório:**
 
     ```bash
-    git clone https://github.com/matheus1696/13cds.git
+    git clone https://github.com/matheus1696/13cmsc.git
     ```
 
 2. **Instale as dependências:**
