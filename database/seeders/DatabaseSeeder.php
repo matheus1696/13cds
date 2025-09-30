@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use App\Models\User;
 
+use App\Models\Admin\Proposed;
 use App\Models\User;
 use Database\Seeders\SpatiePermissions\UserPermissionConfigurationSeeder;
 use Database\Seeders\SpatiePermissions\UserPermissionGlobalSeeder;
@@ -25,13 +26,15 @@ class DatabaseSeeder extends Seeder
                 UserPermissionConfigurationSeeder::class,
                 UserPermissionGlobalSeeder::class,
                 SegmentSeeder::class,
+                ProposedSeeder::class,
             ]);
         } else {
             $this->call([
                 UserPermissionUserSeeder::class,
                 UserPermissionConfigurationSeeder::class,
-                UserPermissionGlobalSeeder::class,  
-                SegmentSeeder::class,        
+                UserPermissionGlobalSeeder::class,
+                SegmentSeeder::class,
+                ProposedSeeder::class,     
             ]);
         }
 

@@ -76,7 +76,7 @@ class PublicController extends Controller
     public function delegados(): View
     {
         // Carrega também o segmento do delegado (se existir)
-        $delegados = Delegate::with('segment')->orderBy('name')->get();
+        $delegados = Delegate::with('Segment')->orderBy('name')->get();
 
         return view('public.delegados', compact('delegados'));
     }
