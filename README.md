@@ -29,7 +29,7 @@ Siga os passos abaixo para instalar e configurar o sistema:
 1. **Clone o repositório:**
 
     ```bash
-    git clone https://github.com/matheus1696/portalaluno.git
+    git clone https://github.com/matheus1696/13cds.git
     ```
 
 2. **Instale as dependências:**
