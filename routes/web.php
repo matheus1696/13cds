@@ -9,6 +9,7 @@ use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PublicController::class, 'home'])->name('home');
+Route::get('/fotos', [PublicController::class, 'fotos'])->name('fotos');
 Route::get('/regimento', [PublicController::class, 'regimento'])->name('regimento');
 Route::get('/decreto', [PublicController::class, 'decreto'])->name('decreto');
 Route::get('/convocatoria', [PublicController::class, 'convocatoria'])->name('convocatoria');

@@ -88,7 +88,7 @@
                         <p class="text-lg leading-relaxed">
                             As pré-conferências são etapas preparatórias fundamentais para a Conferência Municipal de Saúde. 
                             Elas aconteceram em todas as Unidades Básicas de Saúde (UBS) de Caruaru, onde a população pôde 
-                            discutir e propor melhorias para o SUS no município.
+                            discutir, propor melhorias e selecionar as melhores propostas para o SUS no município.
                         </p>
                     </div>
                     
@@ -96,38 +96,47 @@
                     <div class="mb-8">
                         <h4 class="text-2xl font-bold text-gray-900 mb-6 text-center">Registro das Pré-Conferências</h4>
                         
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                            <!-- Placeholder para fotos -->
-                            <div class="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
-                                <i class="fas fa-image text-3xl text-gray-400" aria-hidden="true"></i>
+                        <div x-data="{ openPhoto: false, image: '' }">
+                            <!-- Grid de Imagens -->
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                @for ($i = 0; $i < 8; $i++)
+                                    @php $img = rand(1,168) @endphp
+                                    <div class="aspect-square rounded-lg overflow-hidden shadow-md cursor-pointer"
+                                        @click="openPhoto = true; image = '{{ asset('assets/img/pre_conferencia/pre_conferencia(' . $img . ').png') }}'">
+                                        <img src="{{ asset('assets/img/pre_conferencia/pre_conferencia(' . $img . ').png') }}"
+                                            alt="Foto Pré-Conferência"
+                                            class="w-full h-full object-cover">
+                                    </div>                                    
+                                @endfor
                             </div>
-                            <div class="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
-                                <i class="fas fa-image text-3xl text-gray-400" aria-hidden="true"></i>
-                            </div>
-                            <div class="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
-                                <i class="fas fa-image text-3xl text-gray-400" aria-hidden="true"></i>
-                            </div>
-                            <div class="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
-                                <i class="fas fa-image text-3xl text-gray-400" aria-hidden="true"></i>
+
+                            <!-- Modal -->
+                            <div x-show="openPhoto" x-transition class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50" @click="openPhoto = false">
+                                <div class="relative">
+                                    <button @click="openPhoto = false" class="absolute top-2 right-2 bg-white rounded-full px-3 py-1.5 shadow-md hover:bg-green-700 hover:text-white font-semibold"> ✕ </button>
+                                    <img :src="image" alt="Imagem Ampliada" class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg">
+                                </div>
                             </div>
                         </div>
                         
                         <div class="text-center mt-6">
-                            <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-green-300">
-                                Ver Mais Fotos
-                            </button>
+                            <a href="{{ route('fotos') }}" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-green-300">Ver todas as fotos</a>
                         </div>
                     </div>
                     
                     <!-- Estatísticas -->
-                    <div class="grid grid-cols-3 gap-6 mt-8">
+                    <div class="grid grid-cols-4 gap-6 mt-8">
                         <div class="text-center p-4">
                             <div class="text-3xl font-bold text-green-600 mb-2">65+</div>
                             <div class="text-sm text-gray-600">UBS Participantes</div>
                         </div>
                         <div class="text-center p-4">
                             <div class="text-3xl font-bold text-green-600 mb-2">150+</div>
-                            <div class="text-sm text-gray-600">Propostas</div>
+                            <div class="text-sm text-gray-600">Propostas Debatidas</div>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="text-3xl font-bold text-green-600 mb-2">28</div>
+                            <div class="text-sm text-gray-600">Propostas Selecionadas</div>
                         </div>
                         <div class="text-center p-4">
                             <div class="text-3xl font-bold text-green-600 mb-2">100%</div>
@@ -292,10 +301,6 @@
                             <li class="flex items-start">
                                 <i class="fas fa-bus text-green-600 mt-1 mr-3" aria-hidden="true"></i>
                                 <span><strong>Ônibus:</strong> Linhas 104 - Ponto em frente ao local.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-car text-green-600 mt-1 mr-3" aria-hidden="true"></i>
-                                <span><strong>Van:</strong> Saída da Secretaria de Saúde as 8 horas.</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-wheelchair text-green-600 mt-1 mr-3" aria-hidden="true"></i>
