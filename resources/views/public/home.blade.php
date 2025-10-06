@@ -100,7 +100,7 @@
                                     @php $img = rand(1,168) @endphp
                                     <div class="aspect-square rounded-lg overflow-hidden shadow-md cursor-pointer"
                                         @click="openPhoto = true; image = '{{ asset('assets/img/pre_conferencia_reduzido/pre_conferencia(' . $img . ')-new.webp') }}'">
-                                        <img src="{{ asset('assets/img/pre_conferencia_reduzido/pre-conferencia(' . $img . ')-new.webp') }}" alt="Foto Pré-Conferência" class="w-full h-full object-cover">
+                                        <img src="{{ asset('assets/img/pre_conferencia_reduzido/pre_conferencia(' . $img . ')-new.webp') }}" alt="Foto Pré-Conferência" class="w-full h-full object-cover">
                                     </div>                                    
                                 @endfor
                             </div>
