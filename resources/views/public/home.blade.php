@@ -273,20 +273,19 @@
                     
                     <!-- Item 6 - Perguntas -->
                     <div class="flex gap-6 group" role="listitem">
-                    <div class="flex flex-col items-center">
-                        <div class="w-4 h-4 bg-green-600 rounded-full mt-2 group-hover:scale-125 transition-transform" aria-hidden="true"></div>
-                        <div class="w-0.5 h-full bg-green-300 mt-2" aria-hidden="true"></div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-4 h-4 bg-green-600 rounded-full mt-2 group-hover:scale-125 transition-transform" aria-hidden="true"></div>
+                            <div class="w-0.5 h-full bg-green-300 mt-2" aria-hidden="true"></div>
+                        </div>
+                        <div class="flex-1 bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-green-100 border border-green-200">
+                            <h4 class="font-bold text-xl text-green-900 mb-3">12h — Perguntas e interação com a palestrante</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                            Espaço dedicado à participação do público. Um momento para esclarecer dúvidas, trocar experiências e aprofundar os temas apresentados durante a palestra.
+                            </p>
+                        </div>
                     </div>
-                    <div class="flex-1 bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-green-100 border border-green-200">
-                        <h4 class="font-bold text-xl text-green-900 mb-3">12h — Perguntas e interação com a palestrante</h4>
-                        <p class="text-gray-700 leading-relaxed">
-                        Espaço dedicado à participação do público. Um momento para esclarecer dúvidas, trocar experiências e aprofundar os temas apresentados durante a palestra.
-                        </p>
-                    </div>
-                    </div>
-
                     
-                    <!-- Item 5 - Regimento -->
+                    <!-- Item 7 - Regimento -->
                     <div class="flex gap-6 group" role="listitem">
                         <div class="flex flex-col items-center">
                             <div class="w-4 h-4 bg-green-600 rounded-full mt-2 group-hover:scale-125 transition-transform" 
@@ -299,7 +298,7 @@
                         </div>
                     </div>
                     
-                    <!-- Item 6 - Almoço -->
+                    <!-- Item 8 - Almoço -->
                     <div class="flex gap-6 group" role="listitem">
                         <div class="flex flex-col items-center">
                             <div class="w-4 h-4 bg-yellow-500 rounded-full mt-2 group-hover:scale-125 transition-transform" 
@@ -320,7 +319,7 @@
                         </div>
                     </div>
                     
-                    <!-- Item 7 - Discussão das Propostas -->
+                    <!-- Item 9 - Discussão das Propostas -->
                     <div class="flex gap-6 group" role="listitem">
                         <div class="flex flex-col items-center">
                             <div class="w-4 h-4 bg-purple-600 rounded-full mt-2 group-hover:scale-125 transition-transform" 
@@ -341,7 +340,7 @@
                         </div>
                     </div>
                     
-                    <!-- Item 8 - Plenária Final -->
+                    <!-- Item 10 - Plenária Final -->
                     <div class="flex gap-6 group" role="listitem">
                         <div class="flex flex-col items-center">
                             <div class="w-4 h-4 bg-green-600 rounded-full mt-2 group-hover:scale-125 transition-transform" 
@@ -354,7 +353,7 @@
                         </div>
                     </div>
 
-                    <!-- Item 9 - Encerramento -->
+                    <!-- Item 11 - Encerramento -->
                     <div class="flex gap-6 group" role="listitem">
                         <div class="flex flex-col items-center">
                             <div class="w-4 h-4 bg-green-700 rounded-full mt-2 group-hover:scale-125 transition-transform" 
