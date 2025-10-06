@@ -11,7 +11,7 @@ class CommissionStoreRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,6 +23,10 @@ class CommissionStoreRequest extends FormRequest
     {
         return [
             //
+            'cpf' => ['nullable', 'cpf', 'formato_cpf', 'string', 'size:14', 'unique:commissions,cpf'],
+            'name' => ['required', 'string', 'max:255', 'regex:/^[\pL\s\-]+$/u'],
+            'contact' => ['required', 'celular_com_ddd', 'string', 'max:15'],
+            'is_whatsapp' => ['required', 'boolean'], 
         ];
     }
 }

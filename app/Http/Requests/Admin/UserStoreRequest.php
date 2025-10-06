@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Tutor;
+namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ReflectionEvaluationUpdateRequest extends FormRequest
+class UserStoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,11 +22,11 @@ class ReflectionEvaluationUpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'dominio_conteudo' => 'required|in:0,1,2',
-            'organizacao_estrutura' => 'required|in:0,1,2',
-            'pensamento_critico' => 'required|in:0,1,2',
-            'uso_referencias' => 'required|in:0,1,2',
-            'evaluation_feedback' => 'required|string|max:100000',
+            //
+            'name' => ['required', 'string', 'max:255', 'regex:/^[\pL\s\-]+$/u',],
+            'email' => ['required', 'email', 'max:255', 'unique:users,email'],
+            'cpf' => ['required', 'cpf' ,'formato_cpf', 'max:14', 'min:14', 'unique:users,cpf'],
+            'profession' => ['nullable', 'string', 'max:255'],
         ];
     }
 }

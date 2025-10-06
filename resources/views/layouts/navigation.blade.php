@@ -11,7 +11,7 @@
                 <!-- Navigation Links Desktop -->
                 <div class="hidden lg:-my-px lg:ms-8 lg:flex">
 
-                    @canany(['configuration_proposeds', 'configuration_delegates'])
+                    @canany(['configuration_proposeds', 'configuration_delegates', 'configuration_listerners', 'configuration_commissions'])
                         <x-menu.nav-dropdown title="Comissão Organizadora">
                             <div class="border-r border-gray-200">
                                 <h2 class="font-semibold text-green-700">Gestão</h2>
@@ -21,6 +21,12 @@
                                     @endcan
                                     @can('configuration_proposeds')
                                         <x-menu.nav-link :href="route('proposeds.index')" :active="request()->routeIs('proposeds.index')">Lista de Propostas</x-menu.nav-link>
+                                    @endcan
+                                    @can('configuration_listerners')
+                                        <x-menu.nav-link :href="route('listerners.index')" :active="request()->routeIs('listerners.index')">Lista de Ouvintes</x-menu.nav-link>
+                                    @endcan
+                                    @can('configuration_commissions')
+                                        <x-menu.nav-link :href="route('commissions.index')" :active="request()->routeIs('commissions.index')">Lista de Organizadores</x-menu.nav-link>
                                     @endcan
                                 </div>
                             </div>
@@ -116,6 +122,28 @@
                                         <x-menu.nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">Lista de Usuário</x-menu.nav-link>
                                     </div>
                                 @endcan
+
+                                @canany(['configuration_proposeds', 'configuration_delegates', 'configuration_listerners', 'configuration_commissions'])
+                                    <x-menu.nav-dropdown title="Comissão Organizadora">
+                                        <div class="border-r border-gray-200">
+                                            <h2 class="font-semibold text-green-700">Gestão</h2>
+                                            <div class="py-2 flex flex-col gap-2">
+                                                @can('configuration_delegates')
+                                                    <x-menu.nav-link :href="route('delegates.index')" :active="request()->routeIs('delegates.index')">Lista de Delegados</x-menu.nav-link>
+                                                @endcan
+                                                @can('configuration_proposeds')
+                                                    <x-menu.nav-link :href="route('proposeds.index')" :active="request()->routeIs('proposeds.index')">Lista de Propostas</x-menu.nav-link>
+                                                @endcan
+                                                @can('configuration_listerners')
+                                                    <x-menu.nav-link :href="route('listerners.index')" :active="request()->routeIs('listerners.index')">Lista de Ouvintes</x-menu.nav-link>
+                                                @endcan
+                                                @can('configuration_commissions')
+                                                    <x-menu.nav-link :href="route('commissions.index')" :active="request()->routeIs('commissions.index')">Lista de Organizadores</x-menu.nav-link>
+                                                @endcan
+                                            </div>
+                                        </div>
+                                    </x-menu.nav-dropdown>
+                                @endcanany
                             </div>
                         </div>
                     @endcanany

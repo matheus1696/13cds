@@ -22,9 +22,9 @@ class DelegateStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'cpf' => ['nullable', 'string', 'size:14', 'unique:delegates,cpf'], // CPF formatado: XXX.XXX.XXX-XX
-            'name' => ['required', 'string', 'max:255'],
-            'contact' => ['required', 'string', 'max:15'],
+            'cpf' => ['nullable', 'cpf', 'formato_cpf', 'string', 'size:14', 'unique:delegates,cpf'],
+            'name' => ['required', 'string', 'max:255', 'regex:/^[\pL\s\-]+$/u'],
+            'contact' => ['required', 'celular_com_ddd', 'string', 'max:15'],
             'is_whatsapp' => ['required', 'boolean'], 
             'votes_count' => ['nullable','integer','min:0'],
             'type' => ['nullable','in:Eleito,Suplente,Não Eleito'],

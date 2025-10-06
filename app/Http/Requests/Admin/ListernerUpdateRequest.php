@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class ListernerUpdateRequest extends FormRequest
 {
@@ -11,7 +12,7 @@ class ListernerUpdateRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,6 +24,17 @@ class ListernerUpdateRequest extends FormRequest
     {
         return [
             //
+            'cpf' => [
+                'nullable',
+                'cpf',
+                'formato_cpf',
+                'string',
+                'size:14',
+                Rule::unique('listerners', 'cpf')->ignore($this->listerner->id),
+            ],
+            'name' => ['required', 'string', 'max:255', 'regex:/^[\pL\s\-]+$/u'],
+            'contact' => ['required', 'celular_com_ddd', 'string', 'max:15'],
+            'is_whatsapp' => ['required', 'boolean'],
         ];
     }
 }

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('cpf')->nullable()->unique();
             $table->string('name');
+            $table->string('name_filter');
             $table->string('contact')->nullable();
             $table->boolean('is_whatsapp')->default(false);
             $table->timestamps();

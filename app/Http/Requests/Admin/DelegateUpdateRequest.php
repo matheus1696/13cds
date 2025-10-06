@@ -25,12 +25,14 @@ class DelegateUpdateRequest extends FormRequest
         return [
             'cpf' => [
                 'nullable',
+                'cpf',
+                'formato_cpf',
                 'string',
                 'size:14',
                 Rule::unique('delegates', 'cpf')->ignore($this->delegate->id),
             ],
-            'name' => ['required', 'string', 'max:255'],
-            'contact' => ['required', 'string', 'max:15'],
+            'name' => ['required', 'string', 'max:255', 'regex:/^[\pL\s\-]+$/u'],
+            'contact' => ['required', 'celular_com_ddd', 'string', 'max:15'],
             'is_whatsapp' => ['required', 'boolean'], 
             'votes_count' => ['nullable','integer','min:0'],
             'type' => ['nullable','in:Eleito,Suplente,Não Eleito'],

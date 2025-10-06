@@ -17,14 +17,11 @@
                 <div>
                     <div class="space-y-6">
                         <p class="text-lg text-gray-700 leading-relaxed">
-                            A <strong class="text-green-700">13ª Conferência Municipal de Saúde de Caruaru</strong> tem como tema 
-                            "Caruaru pelo SUS que acolhe, integra e cuida". Este evento é um espaço democrático de discussão 
-                            e construção de propostas para o fortalecimento do Sistema Único de Saúde (SUS) em nosso município.
+                            A <strong class="text-green-700">13ª Conferência Municipal de Saúde de Caruaru</strong> tem como tema "Caruaru pelo SUS que acolhe, integra e cuida". Este evento é um espaço democrático de discussão e construção de propostas para o fortalecimento do Sistema Único de Saúde (SUS) em nosso município.
                         </p>
                         
                         <p class="text-lg text-gray-700 leading-relaxed">
-                            A conferência tem como objetivo principal avaliar a situação da saúde em Caruaru e definir diretrizes 
-                            para a formulação da política de saúde nos próximos anos, garantindo a participação social na gestão do SUS.
+                            A conferência tem como objetivo principal avaliar a situação da saúde em Caruaru e definir diretrizes para a formulação da política de saúde nos próximos anos, garantindo a participação social na gestão do SUS.
                         </p>
                         
                         <div class="bg-green-100 border-l-4 border-green-600 p-6 rounded-r-lg">
@@ -50,7 +47,7 @@
                 
                 <div class="relative hidden md:block">
                     <div class="bg-green-100 p-8 rounded-2xl shadow-xl">
-                        <img src="{{ asset('assets/img/logotipo.png') }}" alt="Logo da 13ª Conferência Municipal de Saúde de Caruaru" class="w-2/3 m-auto h-auto rounded-lg">
+                        <img src="{{ asset('assets/img/logotipo_full.png') }}" alt="Logo da 13ª Conferência Municipal de Saúde de Caruaru" class="m-auto h-auto rounded-lg">
                     </div>
                     <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-green-600 rounded-full opacity-20"></div>
                     <div class="absolute -top-6 -right-6 w-32 h-32 bg-green-400 rounded-full opacity-10"></div>
@@ -162,95 +159,175 @@
                 <div class="bg-gradient-to-r from-green-700 to-green-600 text-white p-6 rounded-t-2xl mb-8 shadow-lg">
                     <div class="flex items-center justify-between">
                         <div>
-                            <h3 class="text-2xl font-bold">08 de Outubro de 2025</h3>
-                            <p class="text-green-100">Conferência Municipal de Saúde</p>
+                            <h3 class="text-2xl font-bold">06 de Outubro de 2025</h3>
+                            <p class="text-green-100">13ª Conferência Municipal de Saúde de Caruaru</p>
                         </div>
-                        <div class="bg-white/20 p-3 rounded-lg">
-                            <i class="fas fa-calendar-day text-2xl" aria-hidden="true"></i>
+                        <div class="bg-white/20 p-3 rounded-lg" aria-hidden="true">
+                            <i class="fas fa-calendar-day text-2xl"></i>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Timeline -->
-                <div class="space-y-6">
-                    <div class="flex gap-6 group">
+                <div class="space-y-6" role="list" aria-label="Cronograma da conferência">
+                    <!-- Item 1 - Credenciamento -->
+                    <div class="flex gap-6 group" role="listitem">
                         <div class="flex flex-col items-center">
-                            <div class="w-4 h-4 bg-green-600 rounded-full mt-2 group-hover:scale-125 transition-transform" aria-hidden="true"></div>
+                            <div class="w-4 h-4 bg-green-600 rounded-full mt-2 group-hover:scale-125 transition-transform" 
+                                aria-hidden="true"></div>
                             <div class="w-0.5 h-full bg-green-300 mt-2" aria-hidden="true"></div>
                         </div>
-                        <div class="flex-1 bg-green-100 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow group-hover:bg-green-100">
+                        <div class="flex-1 bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-green-100 border border-green-200">
                             <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                                <h4 class="font-bold text-xl text-green-900">8h - Credenciamento e Café de Boas-Vindas</h4>
-                                <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium mt-2 md:mt-0">Início</span>
+                                <div>
+                                    <h4 class="font-bold text-xl text-green-900 mb-1">8h - Credenciamento e Café de Boas-Vindas</h4>
+                                    <span class="text-green-700 font-medium">Sessão de Acolhimento</span>
+                                </div>
+                                <span class="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-medium mt-2 md:mt-0 inline-flex items-center">
+                                    <i class="fas fa-coffee mr-2" aria-hidden="true"></i>
+                                    Início
+                                </span>
                             </div>
-                            <p class="text-gray-700">Recepção dos participantes, entrega de materiais e coffee break de boas-vindas</p>
+                            <p class="text-gray-700 leading-relaxed">Recepção dos participantes, entrega de materiais e coffee break de boas-vindas. Momento para network e integração entre os presentes.</p>
                         </div>
                     </div>
                     
-                    <div class="flex gap-6 group">
+                    <!-- Item 2 - Abertura -->
+                    <div class="flex gap-6 group" role="listitem">
                         <div class="flex flex-col items-center">
-                            <div class="w-4 h-4 bg-green-600 rounded-full mt-2 group-hover:scale-125 transition-transform" aria-hidden="true"></div>
+                            <div class="w-4 h-4 bg-green-600 rounded-full mt-2 group-hover:scale-125 transition-transform" 
+                                aria-hidden="true"></div>
                             <div class="w-0.5 h-full bg-green-300 mt-2" aria-hidden="true"></div>
                         </div>
-                        <div class="flex-1 bg-green-100 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow group-hover:bg-green-100">
-                            <h4 class="font-bold text-xl text-green-900 mb-3">9h - Abertura Oficial</h4>
-                            <p class="text-gray-700">Cerimônia de abertura com falas das autoridades e apresentação cultural</p>
+                        <div class="flex-1 bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-green-100 border border-green-200">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                                <div>
+                                    <h4 class="font-bold text-xl text-green-900 mb-1">9h - Abertura Oficial</h4>
+                                </div>
+                                <span class="bg-green-700 text-white px-4 py-2 rounded-full text-sm font-medium mt-2 md:mt-0 inline-flex items-center">
+                                    <i class="fas fa-microphone mr-2" aria-hidden="true"></i>
+                                    Principal
+                                </span>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">Cerimônia de abertura com falas das autoridades, composição da mesa diretora e apresentação cultural.</p>
                         </div>
                     </div>
                     
-                    <div class="flex gap-6 group">
+                    <!-- Item 3 - Palestra Magna -->
+                    <div class="flex gap-6 group" role="listitem">
                         <div class="flex flex-col items-center">
-                            <div class="w-4 h-4 bg-green-600 rounded-full mt-2 group-hover:scale-125 transition-transform" aria-hidden="true"></div>
+                            <div class="w-4 h-4 bg-green-600 rounded-full mt-2 group-hover:scale-125 transition-transform" 
+                                aria-hidden="true"></div>
                             <div class="w-0.5 h-full bg-green-300 mt-2" aria-hidden="true"></div>
                         </div>
-                        <div class="flex-1 bg-green-100 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow group-hover:bg-green-100">
-                            <h4 class="font-bold text-xl text-green-900 mb-3">10h - Painel: "O SUS que acolhe, integra e cuida"</h4>
-                            <p class="text-gray-700">Discussão sobre os desafios e avanços do SUS em Caruaru com especialistas e gestores</p>
+                        <div class="flex-1 bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-green-100 border border-green-200">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                                <div>
+                                    <h4 class="font-bold text-xl text-green-900 mb-1">10h - Palestra Magna</h4>
+                                </div>
+                                <span class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium mt-2 md:mt-0 inline-flex items-center">
+                                    <i class="fas fa-chalkboard-teacher mr-2" aria-hidden="true"></i>
+                                    Palestra
+                                </span>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                <strong>Convidada:</strong> Sra. Inés Costa, Assessora do COSEMS/PE
+                            </p>
                         </div>
                     </div>
                     
-                    <div class="flex gap-6 group">
+                    <!-- Item 4 - Perguntas -->
+                    <div class="flex gap-6 group" role="listitem">
                         <div class="flex flex-col items-center">
-                            <div class="w-4 h-4 bg-yellow-500 rounded-full mt-2 group-hover:scale-125 transition-transform" aria-hidden="true"></div>
+                            <div class="w-4 h-4 bg-green-600 rounded-full mt-2 group-hover:scale-125 transition-transform" 
+                                aria-hidden="true"></div>
+                            <div class="w-0.5 h-full bg-green-300 mt-2" aria-hidden="true"></div>
+                        </div>
+                        <div class="flex-1 bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-green-100 border border-green-200">
+                            <h4 class="font-bold text-xl text-green-900 mb-3">10h30m - Perguntas da Plenária</h4>
+                            <p class="text-gray-700 leading-relaxed">Momento para interação do público com a palestrante. Espaço para esclarecimento de dúvidas e aprofundamento dos temas abordados.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 5 - Regimento -->
+                    <div class="flex gap-6 group" role="listitem">
+                        <div class="flex flex-col items-center">
+                            <div class="w-4 h-4 bg-green-600 rounded-full mt-2 group-hover:scale-125 transition-transform" 
+                                aria-hidden="true"></div>
+                            <div class="w-0.5 h-full bg-green-300 mt-2" aria-hidden="true"></div>
+                        </div>
+                        <div class="flex-1 bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-green-100 border border-green-200">
+                            <h4 class="font-bold text-xl text-green-900 mb-3">10h45m - Leitura e Aprovação do Regimento</h4>
+                            <p class="text-gray-700 leading-relaxed">Apresentação e votação do regimento interno da conferência, estabelecendo as regras e procedimentos para os trabalhos do dia.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 7 - Almoço -->
+                    <div class="flex gap-6 group" role="listitem">
+                        <div class="flex flex-col items-center">
+                            <div class="w-4 h-4 bg-yellow-500 rounded-full mt-2 group-hover:scale-125 transition-transform" 
+                                aria-hidden="true"></div>
                             <div class="w-0.5 h-full bg-yellow-300 mt-2" aria-hidden="true"></div>
                         </div>
-                        <div class="flex-1 bg-yellow-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow group-hover:bg-yellow-100">
-                            <h4 class="font-bold text-xl text-yellow-900 mb-3">12h - Intervalo para Almoço</h4>
-                            <p class="text-yellow-800">Horário livre para almoço e networking</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex gap-6 group">
-                        <div class="flex flex-col items-center">
-                            <div class="w-4 h-4 bg-green-600 rounded-full mt-2 group-hover:scale-125 transition-transform" aria-hidden="true"></div>
-                            <div class="w-0.5 h-full bg-green-300 mt-2" aria-hidden="true"></div>
-                        </div>
-                        <div class="flex-1 bg-green-100 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow group-hover:bg-green-100">
-                            <h4 class="font-bold text-xl text-green-900 mb-3">14h - Grupos de Trabalho Temáticos</h4>
-                            <p class="text-gray-700">Discussão em grupos sobre eixos temáticos específicos da saúde pública</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex gap-6 group">
-                        <div class="flex flex-col items-center">
-                            <div class="w-4 h-4 bg-green-700 rounded-full mt-2 group-hover:scale-125 transition-transform" aria-hidden="true"></div>
-                        </div>
-                        <div class="flex-1 bg-green-100 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow group-hover:bg-green-200">
+                        <div class="flex-1 bg-yellow-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-yellow-100 border border-yellow-200">
                             <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                                <h4 class="font-bold text-xl text-green-900">16h - Plenária Final e Encerramento</h4>
-                                <span class="bg-green-700 text-white px-3 py-1 rounded-full text-sm font-medium mt-2 md:mt-0">Encerramento</span>
+                                <div>
+                                    <h4 class="font-bold text-xl text-yellow-900 mb-1">13h - Intervalo para Almoço</h4>
+                                    <span class="text-yellow-700 font-medium">Horário Livre</span>
+                                </div>
+                                <span class="bg-yellow-500 text-white px-4 py-2 rounded-full text-sm font-medium mt-2 md:mt-0 inline-flex items-center">
+                                    <i class="fas fa-utensils mr-2" aria-hidden="true"></i>
+                                    Intervalo
+                                </span>
                             </div>
-                            <p class="text-gray-700">Apresentação e votação das propostas elaboradas nos grupos de trabalho</p>
+                            <p class="text-yellow-800 leading-relaxed">Horário livre para almoço, networking e integração entre participantes. Sugestão de restaurantes próximos disponível na recepção.</p>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Download da programação -->
-                <div class="text-center mt-12">
-                    <a href="#" class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-green-300">
-                        <i class="fas fa-download mr-2" aria-hidden="true"></i>
-                        Baixar Programação Completa (PDF)
-                    </a>
+
+                    
+                    
+                    <!-- Item 6 - Discussão das Propostas -->
+                    <div class="flex gap-6 group" role="listitem">
+                        <div class="flex flex-col items-center">
+                            <div class="w-4 h-4 bg-purple-600 rounded-full mt-2 group-hover:scale-125 transition-transform" 
+                                aria-hidden="true"></div>
+                            <div class="w-0.5 h-full bg-purple-300 mt-2" aria-hidden="true"></div>
+                        </div>
+                        <div class="flex-1 bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-purple-100 border border-purple-200">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                                <div>
+                                    <h4 class="font-bold text-xl text-purple-900 mb-1">14h - Discussão das Propostas em Plenária</h4>
+                                    <span class="text-purple-700 font-medium">Debate Coletivo</span>
+                                </div>
+                                <span class="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium mt-2 md:mt-0 inline-flex items-center">
+                                    <i class="fas fa-comments mr-2" aria-hidden="true"></i>
+                                    Discussão
+                                </span>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">Debate em plenária sobre todas as sugestões para o fortalecimento do SUS municipal.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 9 - Plenária Final -->
+                    <div class="flex gap-6 group" role="listitem">
+                        <div class="flex flex-col items-center">
+                            <div class="w-4 h-4 bg-green-700 rounded-full mt-2 group-hover:scale-125 transition-transform" 
+                                aria-hidden="true"></div>
+                        </div>
+                        <div class="flex-1 bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-green-100 border border-green-200">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                                <div>
+                                    <h4 class="font-bold text-xl text-green-900 mb-1">16h - Plenária Final e Encerramento</h4>
+                                    <span class="text-green-700 font-medium">Encerramento Solene</span>
+                                </div>
+                                <span class="bg-green-700 text-white px-4 py-2 rounded-full text-sm font-medium mt-2 md:mt-0 inline-flex items-center">
+                                    <i class="fas fa-flag-checkered mr-2" aria-hidden="true"></i>
+                                    Encerramento
+                                </span>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed mb-3">Apresentação dos resultados da votação, eleição dos delegados para a conferência estadual e cerimônia de encerramento com as considerações finais.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

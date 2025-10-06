@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\Admin\User\UserController;
 use App\Http\Controllers\Account\ProfileController;
+use App\Http\Controllers\Admin\CommissionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Admin\DelegateController;
+use App\Http\Controllers\Admin\ListernerController;
 use App\Http\Controllers\Admin\ProposedController;
 use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
@@ -37,6 +39,8 @@ Route::middleware(['auth'])->group(function () {
 
         Route::resource('proposeds', ProposedController::class)->middleware('can:configuration_proposeds');
         Route::resource('delegates', DelegateController::class)->middleware('can:configuration_delegates');
+        Route::resource('listerners', ListernerController::class)->middleware('can:configuration_listerners');
+        Route::resource('commissions', CommissionController::class)->middleware('can:configuration_commissions');
     });
 });
 

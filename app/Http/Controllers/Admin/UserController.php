@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Admin\User;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\User\UserStoreRequest;
+use App\Http\Requests\Admin\UserStoreRequest;
 use App\Mail\FirstAccessMail;
 use App\Models\User;
 use App\Models\User\Permission;

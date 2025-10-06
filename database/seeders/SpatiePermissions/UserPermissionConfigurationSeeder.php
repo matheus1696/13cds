@@ -18,7 +18,8 @@ class UserPermissionConfigurationSeeder extends Seeder
         Permission::create(['name' => 'configuration_users', 'display_name' => 'Configurações Usuários']);
         Permission::create(['name' => 'configuration_proposeds', 'display_name' => 'Configurações Propostas']);
         Permission::create(['name' => 'configuration_delegates', 'display_name' => 'Configurações Delegados']);
-        Permission::create(['name' => 'configuration_participants', 'display_name' => 'Configurações Participantes']);
+        Permission::create(['name' => 'configuration_listerners', 'display_name' => 'Configurações Ouvintes']);
+        Permission::create(['name' => 'configuration_commissions', 'display_name' => 'Configurações Comissão Organizadora']);
 
         // Criando roles com nomes consistentes
         $configurations = Role::create([
