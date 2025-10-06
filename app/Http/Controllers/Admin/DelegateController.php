@@ -18,7 +18,7 @@ class DelegateController extends Controller
     public function index(): View
     {
         //
-        $delegates = Delegate::orderBy('origin')->orderBy('name')->get();
+        $delegates = Delegate::orderBy('origin')->orderBy('segment_id')->orderBy('name')->get();
 
         return view('admin.delegate.delegate_index', compact('delegates'));
     }

@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
                 UserPermissionGlobalSeeder::class,
                 SegmentSeeder::class,
                 ProposedSeeder::class,
+                DelegateSeeder::class,
             ]);
         } else {
             $this->call([
@@ -34,7 +35,8 @@ class DatabaseSeeder extends Seeder
                 UserPermissionConfigurationSeeder::class,
                 UserPermissionGlobalSeeder::class,
                 SegmentSeeder::class,
-                ProposedSeeder::class,     
+                ProposedSeeder::class,
+                DelegateSeeder::class,
             ]);
         }
 

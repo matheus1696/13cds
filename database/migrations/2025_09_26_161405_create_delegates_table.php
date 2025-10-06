@@ -20,7 +20,7 @@ return new class extends Migration
             $table->boolean('is_whatsapp')->default(false);
             $table->string('origin')->nullable();
             $table->unsignedInteger('votes_count')->default(0);
-            $table->enum('type', ['Eleito', 'Suplente', 'Não Eleito'])->default('Não Eleito');
+            $table->enum('type', ['Titular', 'Suplente', 'Não Eleito'])->default('Não Eleito');
             $table->boolean('participated')->default(false);
             
             $table->foreignId('segment_id')->constrained();

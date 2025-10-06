@@ -24,7 +24,7 @@
                         @foreach($delegados as $delegado)
                             <ul class="list-disc ml-8">
                                 <li class="text-lg font-bold text-green-800">
-                                    {{ $delegado->name }} - {{ $delegado->Segment->name }}
+                                    {{ $delegado->name }} - {{ $delegado->origin }} - {{ $delegado->Segment->name }}
                                 </li>
                             </ul>
                         @endforeach
