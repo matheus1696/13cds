@@ -99,10 +99,8 @@
                                 @for ($i = 0; $i < 8; $i++)
                                     @php $img = rand(1,168) @endphp
                                     <div class="aspect-square rounded-lg overflow-hidden shadow-md cursor-pointer"
-                                        @click="openPhoto = true; image = '{{ asset('assets/img/pre_conferencia/pre_conferencia/pre_conferencia_reduzido(' . $img . ')-new.webp') }}'">
-                                        <img src="{{ asset('assets/img/pre_conferencia/pre_conferencia_reduzido(' . $img . ')-new.webp') }}"
-                                            alt="Foto Pré-Conferência"
-                                            class="w-full h-full object-cover">
+                                        @click="openPhoto = true; image = '{{ asset('assets/img/pre_conferencia/pre_conferencia_reduzido(' . $img . ')-new.webp') }}'">
+                                        <img src="{{ asset('assets/img/pre_conferencia_reduzido(' . $img . ')-new.webp') }}" alt="Foto Pré-Conferência" class="w-full h-full object-cover">
                                     </div>                                    
                                 @endfor
                             </div>
