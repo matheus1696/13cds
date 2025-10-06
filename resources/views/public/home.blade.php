@@ -178,19 +178,35 @@
                         <div class="flex-1 bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-green-100 border border-green-200">
                             <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                                 <div>
-                                    <h4 class="font-bold text-xl text-green-900 mb-1">8h - Credenciamento e Café de Boas-Vindas</h4>
-                                    <span class="text-green-700 font-medium">Sessão de Acolhimento</span>
+                                    <h4 class="font-bold text-xl text-green-900 mb-1">8h - Credenciamento</h4>
                                 </div>
                                 <span class="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-medium mt-2 md:mt-0 inline-flex items-center">
                                     <i class="fas fa-coffee mr-2" aria-hidden="true"></i>
                                     Início
                                 </span>
                             </div>
-                            <p class="text-gray-700 leading-relaxed">Recepção dos participantes, entrega de materiais e coffee break de boas-vindas. Momento para network e integração entre os presentes.</p>
+                            <p class="text-gray-700 leading-relaxed">Recepção dos participantes, entrega de materiais.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 - Café -->
+                    <div class="flex gap-6 group" role="listitem">
+                        <div class="flex flex-col items-center">
+                            <div class="w-4 h-4 bg-yellow-500 rounded-full mt-2 group-hover:scale-125 transition-transform" 
+                                aria-hidden="true"></div>
+                            <div class="w-0.5 h-full bg-yellow-300 mt-2" aria-hidden="true"></div>
+                        </div>
+                        <div class="flex-1 bg-yellow-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-yellow-100 border border-yellow-200">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                                <div>
+                                    <h4 class="font-bold text-xl text-yellow-900 mb-1">8h30 - Café da Manhã com Safona para Elas</h4>
+                                </div>
+                            </div>
+                            <p class="text-yellow-800 leading-relaxed">Acolhimento e integração entre participantes.</p>
                         </div>
                     </div>
                     
-                    <!-- Item 2 - Abertura -->
+                    <!-- Item 3 - Apresentação Cultural -->
                     <div class="flex gap-6 group" role="listitem">
                         <div class="flex flex-col items-center">
                             <div class="w-4 h-4 bg-green-600 rounded-full mt-2 group-hover:scale-125 transition-transform" 
@@ -200,7 +216,28 @@
                         <div class="flex-1 bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-green-100 border border-green-200">
                             <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                                 <div>
-                                    <h4 class="font-bold text-xl text-green-900 mb-1">9h - Abertura Oficial</h4>
+                                    <h4 class="font-bold text-xl text-green-900 mb-1">9h30 - Apresentação Cultural</h4>
+                                </div>
+                                <span class="bg-green-700 text-white px-4 py-2 rounded-full text-sm font-medium mt-2 md:mt-0 inline-flex items-center">
+                                    <i class="fas fa-microphone mr-2" aria-hidden="true"></i>
+                                    Apresentação Cultural
+                                </span>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">Apresentação Cultural com Onildo Almeida e o Vereador Thiago Macaco.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 4 - Abertura -->
+                    <div class="flex gap-6 group" role="listitem">
+                        <div class="flex flex-col items-center">
+                            <div class="w-4 h-4 bg-green-600 rounded-full mt-2 group-hover:scale-125 transition-transform" 
+                                aria-hidden="true"></div>
+                            <div class="w-0.5 h-full bg-green-300 mt-2" aria-hidden="true"></div>
+                        </div>
+                        <div class="flex-1 bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-green-100 border border-green-200">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                                <div>
+                                    <h4 class="font-bold text-xl text-green-900 mb-1">10h - Abertura Oficial</h4>
                                 </div>
                                 <span class="bg-green-700 text-white px-4 py-2 rounded-full text-sm font-medium mt-2 md:mt-0 inline-flex items-center">
                                     <i class="fas fa-microphone mr-2" aria-hidden="true"></i>
@@ -211,17 +248,17 @@
                         </div>
                     </div>
                     
-                    <!-- Item 3 - Palestra Magna -->
+                    <!-- Item 5 - Palestra Magna -->
                     <div class="flex gap-6 group" role="listitem">
                         <div class="flex flex-col items-center">
-                            <div class="w-4 h-4 bg-green-600 rounded-full mt-2 group-hover:scale-125 transition-transform" 
+                            <div class="w-4 h-4 bg-blue-600 rounded-full mt-2 group-hover:scale-125 transition-transform" 
                                 aria-hidden="true"></div>
-                            <div class="w-0.5 h-full bg-green-300 mt-2" aria-hidden="true"></div>
+                            <div class="w-0.5 h-full bg-blue-300 mt-2" aria-hidden="true"></div>
                         </div>
-                        <div class="flex-1 bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-green-100 border border-green-200">
+                        <div class="flex-1 bg-blue-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-blue-100 border border-blue-200">
                             <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                                 <div>
-                                    <h4 class="font-bold text-xl text-green-900 mb-1">10h - Palestra Magna</h4>
+                                    <h4 class="font-bold text-xl text-blue-900 mb-1">11h25 - Palestra Magna</h4>
                                 </div>
                                 <span class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium mt-2 md:mt-0 inline-flex items-center">
                                     <i class="fas fa-chalkboard-teacher mr-2" aria-hidden="true"></i>
@@ -229,12 +266,12 @@
                                 </span>
                             </div>
                             <p class="text-gray-700 leading-relaxed mb-3">
-                                <strong>Convidada:</strong> Sra. Inés Costa, Assessora do COSEMS/PE
+                                <strong>Convidada:</strong> Sra. Inês Costa, Assessora do COSEMS/PE; Odontóloga, Mestre em Saúde Coletica e Doutora em Inovação Terapêutica;
                             </p>
                         </div>
                     </div>
                     
-                    <!-- Item 4 - Perguntas -->
+                    <!-- Item 6 - Perguntas -->
                     <div class="flex gap-6 group" role="listitem">
                         <div class="flex flex-col items-center">
                             <div class="w-4 h-4 bg-green-600 rounded-full mt-2 group-hover:scale-125 transition-transform" 
@@ -242,7 +279,7 @@
                             <div class="w-0.5 h-full bg-green-300 mt-2" aria-hidden="true"></div>
                         </div>
                         <div class="flex-1 bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-green-100 border border-green-200">
-                            <h4 class="font-bold text-xl text-green-900 mb-3">10h30m - Perguntas da Plenária</h4>
+                            <h4 class="font-bold text-xl text-green-900 mb-3">12h - Perguntas do tema da palestra</h4>
                             <p class="text-gray-700 leading-relaxed">Momento para interação do público com a palestrante. Espaço para esclarecimento de dúvidas e aprofundamento dos temas abordados.</p>
                         </div>
                     </div>
@@ -255,12 +292,12 @@
                             <div class="w-0.5 h-full bg-green-300 mt-2" aria-hidden="true"></div>
                         </div>
                         <div class="flex-1 bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-green-100 border border-green-200">
-                            <h4 class="font-bold text-xl text-green-900 mb-3">10h45m - Leitura e Aprovação do Regimento</h4>
-                            <p class="text-gray-700 leading-relaxed">Apresentação e votação do regimento interno da conferência, estabelecendo as regras e procedimentos para os trabalhos do dia.</p>
+                            <h4 class="font-bold text-xl text-green-900 mb-3">12h10 - Leitura do Regimento</h4>
+                            <p class="text-gray-700 leading-relaxed">Apresentação do regimento interno da conferência, estabelecendo as regras e procedimentos.</p>
                         </div>
                     </div>
                     
-                    <!-- Item 7 - Almoço -->
+                    <!-- Item 6 - Almoço -->
                     <div class="flex gap-6 group" role="listitem">
                         <div class="flex flex-col items-center">
                             <div class="w-4 h-4 bg-yellow-500 rounded-full mt-2 group-hover:scale-125 transition-transform" 
@@ -271,20 +308,17 @@
                             <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                                 <div>
                                     <h4 class="font-bold text-xl text-yellow-900 mb-1">13h - Intervalo para Almoço</h4>
-                                    <span class="text-yellow-700 font-medium">Horário Livre</span>
                                 </div>
                                 <span class="bg-yellow-500 text-white px-4 py-2 rounded-full text-sm font-medium mt-2 md:mt-0 inline-flex items-center">
                                     <i class="fas fa-utensils mr-2" aria-hidden="true"></i>
                                     Intervalo
                                 </span>
                             </div>
-                            <p class="text-yellow-800 leading-relaxed">Horário livre para almoço, networking e integração entre participantes. Sugestão de restaurantes próximos disponível na recepção.</p>
+                            <p class="text-yellow-800 leading-relaxed">Horário para o almoço e integração entre participantes.</p>
                         </div>
                     </div>
-
                     
-                    
-                    <!-- Item 6 - Discussão das Propostas -->
+                    <!-- Item 7 - Discussão das Propostas -->
                     <div class="flex gap-6 group" role="listitem">
                         <div class="flex flex-col items-center">
                             <div class="w-4 h-4 bg-purple-600 rounded-full mt-2 group-hover:scale-125 transition-transform" 
@@ -294,8 +328,7 @@
                         <div class="flex-1 bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-purple-100 border border-purple-200">
                             <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                                 <div>
-                                    <h4 class="font-bold text-xl text-purple-900 mb-1">14h - Discussão das Propostas em Plenária</h4>
-                                    <span class="text-purple-700 font-medium">Debate Coletivo</span>
+                                    <h4 class="font-bold text-xl text-purple-900 mb-1">14h - Leitura e Apreciação das Propostas em Plenária</h4>
                                 </div>
                                 <span class="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium mt-2 md:mt-0 inline-flex items-center">
                                     <i class="fas fa-comments mr-2" aria-hidden="true"></i>
@@ -306,7 +339,20 @@
                         </div>
                     </div>
                     
-                    <!-- Item 9 - Plenária Final -->
+                    <!-- Item 8 - Plenária Final -->
+                    <div class="flex gap-6 group" role="listitem">
+                        <div class="flex flex-col items-center">
+                            <div class="w-4 h-4 bg-green-600 rounded-full mt-2 group-hover:scale-125 transition-transform" 
+                                aria-hidden="true"></div>
+                            <div class="w-0.5 h-full bg-green-300 mt-2" aria-hidden="true"></div>
+                        </div>
+                        <div class="flex-1 bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-green-100 border border-green-200">
+                            <h4 class="font-bold text-xl text-green-900 mb-3">15h40 - Plenária Final</h4>
+                            <p class="text-gray-700 leading-relaxed">Composição da mesa para plenária final.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 9 - Encerramento -->
                     <div class="flex gap-6 group" role="listitem">
                         <div class="flex flex-col items-center">
                             <div class="w-4 h-4 bg-green-700 rounded-full mt-2 group-hover:scale-125 transition-transform" 
@@ -315,15 +361,13 @@
                         <div class="flex-1 bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-green-100 border border-green-200">
                             <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                                 <div>
-                                    <h4 class="font-bold text-xl text-green-900 mb-1">16h - Plenária Final e Encerramento</h4>
-                                    <span class="text-green-700 font-medium">Encerramento Solene</span>
+                                    <h4 class="font-bold text-xl text-green-900 mb-1">16h - Encerramento</h4>
                                 </div>
                                 <span class="bg-green-700 text-white px-4 py-2 rounded-full text-sm font-medium mt-2 md:mt-0 inline-flex items-center">
                                     <i class="fas fa-flag-checkered mr-2" aria-hidden="true"></i>
                                     Encerramento
                                 </span>
                             </div>
-                            <p class="text-gray-700 leading-relaxed mb-3">Apresentação dos resultados da votação, eleição dos delegados para a conferência estadual e cerimônia de encerramento com as considerações finais.</p>
                         </div>
                     </div>
                 </div>
