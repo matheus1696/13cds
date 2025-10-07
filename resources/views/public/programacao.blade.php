@@ -8,7 +8,7 @@
             <div class="text-center mb-16">
                 <span class="text-green-600 font-semibold uppercase tracking-wider text-sm mb-2 block">Cronograma</span>
                 <h1 id="programacao-title" class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    Programação da XIII Conferência Municipal de Saúde
+                    Programação da 13ª Conferência Municipal de Saúde
                 </h1>
                 <div class="w-24 h-1 bg-green-600 mx-auto"></div>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto mt-4">

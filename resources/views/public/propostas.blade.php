@@ -9,7 +9,7 @@
             <div class="text-center mb-12">
                 <span class="text-green-600 font-semibold uppercase tracking-wider text-sm mb-2 block">Propostas</span>
                 <h1 id="propostas-title" class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    Propostas da XIII Conferência Municipal de Saúde
+                    Propostas da 13ª Conferência Municipal de Saúde
                 </h1>
                 <div class="w-24 h-1 bg-green-600 mx-auto mb-4"></div>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
