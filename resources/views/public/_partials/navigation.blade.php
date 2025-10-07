@@ -12,30 +12,13 @@
             
             <!-- Menu desktop -->
             <div class="hidden lg:flex space-x-1 text-sm">
-                <a href="{{ route('regimento') }}" 
-                   class="px-4 py-2 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('regimento') ? 'bg-green-900 font-semibold' : '' }}">
-                   Regimento
-                </a>
-                <a href="{{ route('decreto') }}" 
-                   class="px-4 py-2 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('decreto') ? 'bg-green-900 font-semibold' : '' }}">
-                   Decreto
-                </a>
-                <a href="{{ route('convocatoria') }}" 
-                   class="px-4 py-2 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('convocatoria') ? 'bg-green-900 font-semibold' : '' }}">
-                   Convocatória
-                </a>
-                <a href="{{ route('programacao') }}" 
-                   class="px-4 py-2 rounded-md transition duration-200 hover:bg-green-600">
-                   Programação
-                </a>
-                <a href="{{ route('delegados') }}"
-                   class="px-4 py-2 rounded-md transition duration-200 hover:bg-green-600">
-                   Delegados
-                </a>
-                <a href="{{ route('propostas') }}"
-                   class="px-4 py-2 rounded-md transition duration-200 hover:bg-green-600">
-                   Propostas
-                </a>
+                <a href="{{ route('regimento') }}" class="px-4 py-2 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('regimento') ? 'bg-green-900 font-semibold' : '' }}"> Regimento </a>
+                <a href="{{ route('decreto') }}" class="px-4 py-2 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('decreto') ? 'bg-green-900 font-semibold' : '' }}"> Decreto </a>
+                <a href="{{ route('convocatoria') }}" class="px-4 py-2 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('convocatoria') ? 'bg-green-900 font-semibold' : '' }}"> Convocatória </a>
+                <a href="{{ route('programacao') }}" class="px-4 py-2 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('programacao') ? 'bg-green-900 font-semibold' : '' }}"> Programação </a>
+                <a href="{{ route('delegados') }}" class="px-4 py-2 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('delegados') ? 'bg-green-900 font-semibold' : '' }}"> Delegados </a>
+                <a href="{{ route('propostas') }}" class="px-4 py-2 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('propostas') ? 'bg-green-900 font-semibold' : '' }}"> Propostas </a>
+                <a href="{{ route('certificados') }}" class="px-4 py-2 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('certificados') ? 'bg-green-900 font-semibold' : '' }}"> Emissão de Certificado </a>
             </div>
 
             <!-- Menu mobile -->
@@ -80,30 +63,13 @@
                     
                     <!-- Links mobile -->
                     <nav class="space-y-4 text-sm" aria-label="Navegação mobile">
-                        <a href="{{ route('regimento') }}" 
-                           class="block py-2 px-4 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('regimento') ? 'bg-green-900 font-semibold' : '' }}">
-                           Regimento
-                        </a>
-                        <a href="{{ route('decreto') }}" 
-                           class="block py-2 px-4 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('decreto') ? 'bg-green-900 font-semibold' : '' }}">
-                           Decreto
-                        </a>
-                        <a href="{{ route('convocatoria') }}" 
-                           class="block py-2 px-4 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('convocatoria') ? 'bg-green-900 font-semibold' : '' }}">
-                           Convocatória
-                        </a>
-                        <a href="{{ route('programacao') }}" 
-                           class="block py-2 px-4 rounded-md transition duration-200 hover:bg-green-600">
-                           Programação
-                        </a>
-                        <a href="{{ route('delegados') }}" 
-                           class="block py-2 px-4 rounded-md transition duration-200 hover:bg-green-600">
-                           Delegados
-                        </a>
-                        <a href="{{ route('propostas') }}" 
-                           class="block py-2 px-4 rounded-md transition duration-200 hover:bg-green-600">
-                           Propostas
-                        </a>
+                        <a href="{{ route('regimento') }}" class="block py-2 px-4 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('regimento') ? 'bg-green-900 font-semibold' : '' }}">Regimento</a>
+                        <a href="{{ route('decreto') }}" class="block py-2 px-4 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('decreto') ? 'bg-green-900 font-semibold' : '' }}">Decreto</a>
+                        <a href="{{ route('convocatoria') }}" class="block py-2 px-4 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('convocatoria') ? 'bg-green-900 font-semibold' : '' }}">Convocatória</a>
+                        <a href="{{ route('programacao') }}" class="block py-2 px-4 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('programacao') ? 'bg-green-900 font-semibold' : '' }}">Programação</a>
+                        <a href="{{ route('delegados') }}" class="block py-2 px-4 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('delegados') ? 'bg-green-900 font-semibold' : '' }}">Delegados</a>
+                        <a href="{{ route('propostas') }}" class="block py-2 px-4 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('propostas') ? 'bg-green-900 font-semibold' : '' }}">Propostas</a>
+                        <a href="{{ route('certificados') }}" class="px-4 py-2 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('certificados') ? 'bg-green-900 font-semibold' : '' }}">Emissão de Certificado</a>
                     </nav>
                 </div>
             </div>

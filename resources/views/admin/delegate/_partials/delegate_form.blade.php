@@ -74,7 +74,7 @@
         <x-form.input-label for="type" :value="__('Tipo')" />
         <x-form.select id="type" name="type" required>
             <option value="Não Eleito" {{ old('type', $delegate->type ?? '') == 'Não Eleito' ? 'selected' : 'selected' }}>Não Eleito</option>
-            <option value="Eleito" {{ old('type', $delegate->type ?? '') == 'Eleito' ? 'selected' : '' }}>Eleito</option>
+            <option value="Titular" {{ old('type', $delegate->type ?? '') == 'Titular' ? 'selected' : '' }}>Eleito</option>
             <option value="Suplente" {{ old('type', $delegate->type ?? '') == 'Suplente' ? 'selected' : '' }}>Suplente</option>
         </x-form.select>
         <x-form.input-error :messages="$errors->get('type')" class="mt-2"/>

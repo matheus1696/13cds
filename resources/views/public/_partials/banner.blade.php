@@ -12,7 +12,7 @@
             <!-- Título -->
             <h1 id="hero-title" 
                 class="flex flex-col gap-1 text-4xl md:text-6xl lg:text-7xl font-bold mb-3 leading-tight">
-                <span class="text-gray-800">XIIIª Conferência</span>
+                <span class="text-gray-800">13ª Conferência</span>
                 <span class="text-green-800">Municipal de Saúde</span>
             </h1>
             

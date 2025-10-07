@@ -19,7 +19,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
     <!-- Styles & Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css'])
+
+    <!-- Livewire Styles -->
+    @livewireStyles
+
+    <!-- Scripts Próprios, Máscaras de Inputs -->
+    <script src="{{ asset('assets/js/maskInput.js') }}"></script>
 </head>
 <body class="font-[Open Sans] antialiased select-none bg-green-50">
 
@@ -29,6 +35,9 @@
             {{ $slot }}
         </main>
     </div>
+
+    <!-- Livewire Script -->
+    @livewireScripts
 
 </body>
 </html>

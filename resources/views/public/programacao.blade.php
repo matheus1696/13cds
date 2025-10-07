@@ -108,7 +108,7 @@
                                     Principal
                                 </span>
                             </div>
-                            <p class="text-gray-700 leading-relaxed">Cerimônia de abertura com falas das autoridades, composição da mesa diretora e apresentação cultural.</p>
+                            <p class="text-gray-700 leading-relaxed">Cerimônia de abertura com falas das autoridades.</p>
                         </div>
                     </div>
                     

@@ -18,6 +18,13 @@ Route::get('/convocatoria', [PublicController::class, 'convocatoria'])->name('co
 Route::get('/programacao', [PublicController::class, 'programacao'])->name('programacao');
 Route::get('/delegados', [PublicController::class, 'delegados'])->name('delegados');
 Route::get('/propostas', [PublicController::class, 'propostas'])->name('propostas');
+Route::get('/certificados', [PublicController::class, 'certificados'])->name('certificados');
+
+Route::prefix('certificados')->group(function () {
+    Route::get('delegado/{id}', [PublicController::class, 'printDelegate'])->name('certificado.print.delegado');
+    Route::get('comissao/{id}', [PublicController::class, 'printCommission'])->name('certificado.print.comissao');
+    Route::get('ouvinte/{id}', [PublicController::class, 'printListener'])->name('certificado.print.ouvinte');
+});
 
 Route::get('/dashboard', function () {return redirect(route('dashboard.index')); })->name('dashboard');
 
