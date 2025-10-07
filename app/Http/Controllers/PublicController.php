@@ -107,9 +107,9 @@ class PublicController extends Controller
     {
         // Inicializa as coleções vazias
         $cpf = '';
-        $delegates = [];
-        $commissions = [];
-        $listerner = [];
+        $delegates = collect();
+        $commissions = collect();
+        $listerner = collect();
 
         // Se houver CPF no GET, realiza a validação e busca
         if ($request->has('cpf')) {
@@ -124,20 +124,26 @@ class PublicController extends Controller
         return view('public.certificados', compact('cpf', 'delegates', 'commissions', 'listerner'));
     }
 
-    public function printDelegate(int $id): \Illuminate\Http\Response
+    public function printDelegate(int $id)
     {
         $delegate = Delegate::findOrFail($id);
 
-        $pdf = PDF::loadView('certificates.delegate', compact('delegate'));
+        $pdf = Pdf::loadView('public.certificates.certificates_delegate', compact('delegate'));
 
         return $pdf->stream("Certificado_Delegado_{$delegate->name}.pdf");
     }
+
 
     public function printCommission(int $id): \Illuminate\Http\Response
     {
         $commission = Commission::findOrFail($id);
 
-        $pdf = Pdf::loadView('certificates.commission', compact('commission'));
+        $pdf = Pdf::loadView('public.certificates.certificates_commission', compact('commission'))
+            ->setPaper('a4', 'landscape')
+            ->setOption('margin-top', 0)
+            ->setOption('margin-bottom', 0)
+            ->setOption('margin-left', 0)
+            ->setOption('margin-right', 0);
 
         return $pdf->stream("Certificado_Comissao_{$commission->name}.pdf");
     }
@@ -146,7 +152,12 @@ class PublicController extends Controller
     {
         $listener = Listerner::findOrFail($id);
 
-        $pdf = PDF::loadView('certificates.listener', compact('listener'));
+        $pdf = Pdf::loadView('public.certificates.certificates_listener', compact('listener'))
+            ->setPaper('a4', 'landscape')
+            ->setOption('margin-top', 0)
+            ->setOption('margin-bottom', 0)
+            ->setOption('margin-left', 0)
+            ->setOption('margin-right', 0);
 
         return $pdf->stream("Certificado_Ouvinte_{$listener->name}.pdf");
     }

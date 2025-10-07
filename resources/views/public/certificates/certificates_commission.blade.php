@@ -2,19 +2,49 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Certificado de Participação</title>
+    <title>Certificado</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        h1 { font-size: 32px; color: #2F855A; }
-        p { font-size: 18px; color: #333; margin: 20px 0; }
-        .name { font-size: 24px; font-weight: bold; margin: 30px 0; }
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(" asset{{ ('assets/img/certificado.png') }}");
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #004d00;
+            margin: 0;
+        }
+
+        p {
+            font-size: 24px;
+            color: #004d00;
+        }
     </style>
 </head>
-<body>
-    <h1>Certificado de Participação</h1>
-    <p>Conferimos a</p>
-    <div class="name">{{ $delegate->name }}</div>
-    <p>como Delegado(a) na XIII Conferência Municipal de Saúde de Caruaru.</p>
-    <p>Data: {{ now()->format('d/m/Y') }}</p>
+<body style="background-image: url('{{ asset('assets/img/certificado.png') }}'); background-size: cover; background-position: center;">
+    <div class="content">
+        <h1>Certificado de Participação</h1>
+        <p>Conferimos que</p>
+        <h2>{{ $delegate->name }}</h2>
+        <p>participou da XIII Conferência Municipal de Saúde de Caruaru-PE</p>
+        <p class="date">Emissão: {{ now()->format('d/m/Y') }}</p>
+    </div>
 </body>
 </html>
