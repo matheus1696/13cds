@@ -21,7 +21,7 @@
                 <div class="bg-gradient-to-r from-green-700 to-green-600 text-white p-6 rounded-t-2xl mb-8 shadow-lg">
                     <div class="flex items-center justify-between">
                         <div>
-                            <h3 class="text-2xl font-bold">06 de Outubro de 2025</h3>
+                            <h3 class="text-2xl font-bold">08 de Outubro de 2025</h3>
                             <p class="text-green-100">13ª Conferência Municipal de Saúde de Caruaru</p>
                         </div>
                         <div class="bg-white/20 p-3 rounded-lg" aria-hidden="true">
