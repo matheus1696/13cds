@@ -14,7 +14,7 @@
             font-family: 'Arial', sans-serif;
             width: 100%;
             height: 100vh;
-            background-image: url('<?php echo $_SERVER["DOCUMENT_ROOT"].'assets/img/certificado.jpg';?>');
+            background-image: url('<?php echo $_SERVER["DOCUMENT_ROOT"].'\assets\img\certificado.png';?>');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -22,7 +22,7 @@
 
         .certificate-content {
             position: absolute;
-            top: 50%;
+            top: 42%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
@@ -31,18 +31,20 @@
         }
 
         .certificate-content p {
-            font-size: 30px;
+            font-size: 32px;
             line-height: 1.8;
         }
 
         .name {
-            font-weight: bold;
-            font-size: 26px;
+            font-weight: 600;
+            font-size: 32px;
             color: #022c22;
         }
 
         .segment {
-            font-weight: bold;
+            font-weight: 600;
+            font-size: 32px;
+            color: #022c22;
         }
     </style>
 </head>
@@ -55,7 +57,7 @@
             <span class="segment">{{ $delegate->Segment->name ?? 'Segmento não informado' }}</span> 
             da 13ª Conferência Municipal de Saúde, com o tema: 
             "Caruaru pelo SUS que acolhe, integra e cuida", 
-            realizada dia 8 de outubro de 2025 no Auditório da Secretaria Municipal de Educação de Caruaru.
+            realizada dia 8 de outubro de 2025 no Auditório da Secretaria Municipal de Educação e Esporte de Caruaru, com carga horária de 8 horas.
         </p>
     </div>
 </body>

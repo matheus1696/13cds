@@ -18,7 +18,7 @@
                 <a href="{{ route('programacao') }}" class="px-4 py-2 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('programacao') ? 'bg-green-900 font-semibold' : '' }}"> Programação </a>
                 <a href="{{ route('delegados') }}" class="px-4 py-2 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('delegados') ? 'bg-green-900 font-semibold' : '' }}"> Delegados </a>
                 <a href="{{ route('propostas') }}" class="px-4 py-2 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('propostas') ? 'bg-green-900 font-semibold' : '' }}"> Propostas </a>
-                <a href="{{ route('home') }}" class="px-4 py-2 rounded-md transition duration-200 hover:bg-gray-600 {{ request()->routeIs('home') ? 'bg-gray-900 font-semibold' : '' }}"> Emissão do Certificado </a>
+                <a href="{{ route('certificados') }}" class="px-4 py-2 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('home') ? 'bg-green-900 font-semibold' : '' }}"> Emissão do Certificado </a>
             </div>
 
             <!-- Menu mobile -->
@@ -69,7 +69,7 @@
                         <a href="{{ route('programacao') }}" class="block py-2 px-4 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('programacao') ? 'bg-green-900 font-semibold' : '' }}">Programação</a>
                         <a href="{{ route('delegados') }}" class="block py-2 px-4 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('delegados') ? 'bg-green-900 font-semibold' : '' }}">Delegados</a>
                         <a href="{{ route('propostas') }}" class="block py-2 px-4 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('propostas') ? 'bg-green-900 font-semibold' : '' }}">Propostas</a>
-                        <a href="{{ route('home') }}" class="block py-2 px-4 rounded-md transition duration-200 hover:bg-gray-600 {{ request()->routeIs('home') ? 'bg-gray-900 font-semibold' : '' }}">Emissão de Certificado</a>
+                        <a href="{{ route('certificados') }}" class="block py-2 px-4 rounded-md transition duration-200 hover:bg-green-600 {{ request()->routeIs('home') ? 'bg-green-900 font-semibold' : '' }}">Emissão de Certificado</a>
                     </nav>
                 </div>
             </div>
