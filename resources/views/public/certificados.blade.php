@@ -16,21 +16,22 @@
                 </p>
             </div>
 
-            <div class="max-w-xl mx-auto mt-12">
+            <div class="max-w-2xl mx-auto mt-12">
 
-                <div class="mx-auto">
+                <div class="flex justify-center mx-auto">
                     <form action="{{ route('certificados') }}" method="GET" class="flex gap-2">                    
                         <!-- CPF -->
-                        <div class="mb-4 w-full">
+                        <div class="mb-4 w-80">
                             <x-form.input-label for="cpf" :value="__('CPF')"/>
                             <x-form.input type="text" id="cpf" name="cpf" value="{{ old('cpf', $cpf) }}" :placeholder="__('Your CPF')" required onkeyup="handleCPF(event)" maxlength="14" minlength="14"/>
                             <x-form.input-error :messages="$errors->get('cpf')" class="mt-2" />
                         </div>
                     
                         <!-- Botão de Envio -->
-                        <div class="mt-7">
+                        <div class="mt-6 w-40">
                             <x-button.btn-primary type="submit" class="w-full">
                                 <i class="fa-solid fa-magnifying-glass"></i>
+                                <span>Buscar</span>
                             </x-button.btn-primary>
                         </div>
                     </form>
