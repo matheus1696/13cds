@@ -40,6 +40,17 @@
                 <!-- Resultados -->
                 <div class="mt-10 space-y-6">
 
+                    <!-- CPF Não Localizado -->
+                    @if ($empty)
+                        <div class="bg-red-50 border-l-4 border-red-600 rounded-r-lg shadow-sm p-6">
+                            <ul class="list-disc list-inside space-y-2 text-gray-800">
+                                <li class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                                    <span>CPF Não Localizado</span>
+                                </li>
+                            </ul>
+                        </div>
+                    @endif
+
                     <!-- Delegados -->
                     @if ($delegates->isNotEmpty())
                         <div class="bg-green-50 border-l-4 border-green-600 rounded-r-lg shadow-sm p-6">

@@ -9,6 +9,7 @@ use App\Models\Admin\Listerner;
 use App\Models\Admin\Proposed;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\View\View;
 
 class PublicController extends Controller
@@ -104,25 +105,43 @@ class PublicController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\View\View
      */
-    public function certificados(CertificatesStoreRequest $request): View
+    public function certificados(Request $request)
     {
         // Inicializa as coleções vazias
         $cpf = '';
+        $empty = false;
         $delegates = collect();
         $commissions = collect();
         $listerner = collect();
 
         // Se houver CPF no GET, realiza a validação e busca
         if ($request->has('cpf')) {
+            
+            // Validação específica para este contexto
+            $validator = Validator::make($request->all(), [
+                'cpf' => ['required', 'string', 'cpf'],
+            ], [
+                'cpf.required' => 'O campo CPF é obrigatório.',
+                'cpf.cpf' => 'O CPF informado é inválido.',
+            ]);
+
+            if ($validator->fails()) {
+                // Retorna com erros de validação
+                return back()->withErrors($validator)->withInput();
+            }
 
             $cpf = $request->input('cpf');
 
             $delegates = Delegate::where('cpf', $cpf)->get();
             $commissions = Commission::where('cpf', $cpf)->get();
             $listerner = Listerner::where('cpf', $cpf)->get();
+
+            if ($delegates->isEmpty() && $commissions->isEmpty() && $listerner->isEmpty()) {
+                $empty = true;
+            }
         }
 
-        return view('public.certificados', compact('cpf', 'delegates', 'commissions', 'listerner'));
+        return view('public.certificados', compact('cpf', 'empty', 'delegates', 'commissions', 'listerner'));
     }
 
     public function printDelegate(int $id)
