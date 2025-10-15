@@ -22,7 +22,7 @@ class CertificatesStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'cpf' => ['required', 'string', 'size:14'],
+            'cpf' => ['required', 'string', 'cpf', 'formato_cpf', 'max:14'],
         ];
     }
 }
