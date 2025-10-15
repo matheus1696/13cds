@@ -25,4 +25,14 @@ class CertificatesStoreRequest extends FormRequest
             'cpf' => ['required', 'string', 'cpf', 'formato_cpf', 'max:14'],
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'cpf.required' => 'O campo CPF é obrigatório.',
+            'cpf.cpf' => 'O CPF informado é inválido.',
+            'cpf.formato_cpf' => 'O CPF deve estar no formato correto (ex: 000.000.000-00).',
+            'cpf.max' => 'O CPF não pode ter mais de 14 caracteres.',
+        ];
+    }
 }
