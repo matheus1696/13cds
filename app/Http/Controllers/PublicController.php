@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CertificatesStoreRequest;
 use App\Models\Admin\Commission;
 use App\Models\Admin\Delegate;
 use App\Models\Admin\Listerner;
@@ -103,7 +104,7 @@ class PublicController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\View\View
      */
-    public function certificados(Request $request): View
+    public function certificados(CertificatesStoreRequest $request): View
     {
         // Inicializa as coleções vazias
         $cpf = '';
@@ -154,7 +155,12 @@ class PublicController extends Controller
             ->setOption('margin-top', 0)
             ->setOption('margin-bottom', 0)
             ->setOption('margin-left', 0)
-            ->setOption('margin-right', 0);
+            ->setOption('margin-right', 0)
+            ->setOption('dpi', 150)
+            ->setOption('isRemoteEnabled', true) // 🔥 IMPORTANTE!
+            ->setOption('isHtml5ParserEnabled', true)
+            ->setOption('isPhpEnabled', true) // 🔥 Tente isso também
+            ->setOption('chroot', base_path()); // 🔥 Define o diretório raiz
 
         return $pdf->stream("Certificado_Comissao_{$commission->name}.pdf");
     }
@@ -168,7 +174,12 @@ class PublicController extends Controller
             ->setOption('margin-top', 0)
             ->setOption('margin-bottom', 0)
             ->setOption('margin-left', 0)
-            ->setOption('margin-right', 0);
+            ->setOption('margin-right', 0)
+            ->setOption('dpi', 150)
+            ->setOption('isRemoteEnabled', true) // 🔥 IMPORTANTE!
+            ->setOption('isHtml5ParserEnabled', true)
+            ->setOption('isPhpEnabled', true) // 🔥 Tente isso também
+            ->setOption('chroot', base_path()); // 🔥 Define o diretório raiz
 
         return $pdf->stream("Certificado_Ouvinte_{$listener->name}.pdf");
     }
