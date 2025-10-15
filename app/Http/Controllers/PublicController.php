@@ -128,14 +128,18 @@ class PublicController extends Controller
     {
         $delegate = Delegate::findOrFail($id);
 
-        // Configurar Dompdf CORRETAMENTE para permitir imagens
+        // Configurações específicas para imagens
         $pdf = Pdf::loadView('public.certificates.certificates_delegate', compact('delegate'))
             ->setPaper('a4', 'landscape')
             ->setOption('margin-top', 0)
             ->setOption('margin-bottom', 0)
             ->setOption('margin-left', 0)
             ->setOption('margin-right', 0)
-            ->setOption('dpi', 150);
+            ->setOption('dpi', 150)
+            ->setOption('isRemoteEnabled', true) // 🔥 IMPORTANTE!
+            ->setOption('isHtml5ParserEnabled', true)
+            ->setOption('isPhpEnabled', true) // 🔥 Tente isso também
+            ->setOption('chroot', base_path()); // 🔥 Define o diretório raiz
 
         return $pdf->stream("Certificado_Delegado_{$delegate->name}.pdf");
     }
