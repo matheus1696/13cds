@@ -53,20 +53,18 @@
                                     </h3>
                                     <div class="text-red-700">
                                         <p class="mb-2">Não foi encontrado nenhum certificado para o CPF:</p>
-                                        <p class="font-mono bg-red-100 px-3 py-1 rounded inline-block">{{ $cpf }}</p>
                                         <div class="mt-3 text-sm">
                                             <p>Verifique se:</p>
                                             <ul class="list-disc list-inside ml-4 mt-1 space-y-1">
                                                 <li>O CPF foi digitado corretamente</li>
                                                 <li>Você participou como delegado, comissão ou ouvinte</li>
-                                                <li>O cadastro foi realizado corretamente</li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="mt-4 pt-3 border-t border-red-200">
                                         <p class="text-red-600 text-sm">
                                             <i class="fas fa-info-circle mr-1"></i>
-                                            Em caso de dúvidas, entre em contato com a organização.
+                                            Em caso de dúvidas, entre em contato pelo email conselhosaudecaruaru@gmail.com.
                                         </p>
                                     </div>
                                 </div>
