@@ -131,7 +131,6 @@ class PublicController extends Controller
         // Configurar Dompdf CORRETAMENTE para permitir imagens
         $pdf = Pdf::loadView('public.certificates.certificates_delegate', compact('delegate'))
             ->setPaper('a4', 'landscape')
-            ->setOption('isRemoteEnabled', true)
             ->setOption('margin-top', 0)
             ->setOption('margin-bottom', 0)
             ->setOption('margin-left', 0)
