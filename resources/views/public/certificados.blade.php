@@ -42,12 +42,35 @@
 
                     <!-- CPF Não Localizado -->
                     @if ($empty)
-                        <div class="bg-red-50 border-l-4 border-red-600 rounded-r-lg shadow-sm p-6">
-                            <ul class="list-disc list-inside space-y-2 text-gray-800">
-                                <li class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-                                    <span>CPF Não Localizado</span>
-                                </li>
-                            </ul>
+                        <div class="bg-red-50 border-l-4 border-red-600 rounded-lg shadow-sm p-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-exclamation-circle text-red-600 text-xl mt-0.5"></i>
+                                </div>
+                                <div class="ml-3 flex-1">
+                                    <h3 class="text-red-800 font-semibold text-lg mb-2">
+                                        CPF não localizado
+                                    </h3>
+                                    <div class="text-red-700">
+                                        <p class="mb-2">Não foi encontrado nenhum certificado para o CPF:</p>
+                                        <p class="font-mono bg-red-100 px-3 py-1 rounded inline-block">{{ $cpf }}</p>
+                                        <div class="mt-3 text-sm">
+                                            <p>Verifique se:</p>
+                                            <ul class="list-disc list-inside ml-4 mt-1 space-y-1">
+                                                <li>O CPF foi digitado corretamente</li>
+                                                <li>Você participou como delegado, comissão ou ouvinte</li>
+                                                <li>O cadastro foi realizado corretamente</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 pt-3 border-t border-red-200">
+                                        <p class="text-red-600 text-sm">
+                                            <i class="fas fa-info-circle mr-1"></i>
+                                            Em caso de dúvidas, entre em contato com a organização.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     @endif
 
@@ -59,12 +82,27 @@
                                 @foreach ($delegates as $item)
                                     <li class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                                         <span>{{ $item->name }} - {{ $item->cpf }} - {{ $item->Segment->name ?? '' }}</span>
-                                        <a href="{{ route('certificado.print.delegado', $item->id) }}" 
-                                        target="_blank"
-                                        class="inline-flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md text-sm font-medium transition-colors">
-                                            <i class="fas fa-print mr-2"></i>
-                                            Imprimir Certificado
-                                        </a>
+                                        @if ($item->participated)
+                                            <a href="{{ route('certificado.print.delegado', $item->id) }}" 
+                                            target="_blank"
+                                            class="inline-flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md text-sm font-medium transition-colors">
+                                                <i class="fas fa-print mr-2"></i>
+                                                Imprimir Certificado
+                                            </a>
+                                        @else
+                                            <div class="relative group">
+                                                <button 
+                                                    disabled
+                                                    class="inline-flex items-center px-4 py-2 bg-gray-300 text-gray-600 rounded-md text-sm font-medium cursor-not-allowed">
+                                                    <i class="fas fa-times-circle mr-2"></i>
+                                                    Certificado Indisponível
+                                                </button>
+                                                <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-10">
+                                                    Delegado não participou da conferência
+                                                    <div class="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-800"></div>
+                                                </div>
+                                            </div>
+                                        @endif
                                     </li>
                                 @endforeach
                             </ul>
