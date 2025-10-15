@@ -14,7 +14,7 @@
             font-family: 'Arial', sans-serif;
             width: 100%;
             height: 100vh;
-            background-image: url('{{ public_path('assets/img/certificates.png') }}');
+            background-image: url('{{ asset('assets/img/certificates.png') }}');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
