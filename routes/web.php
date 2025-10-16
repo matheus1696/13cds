@@ -46,6 +46,7 @@ Route::middleware(['auth'])->group(function () {
 
         Route::resource('proposeds', ProposedController::class)->middleware('can:configuration_proposeds');
         Route::resource('delegates', DelegateController::class)->middleware('can:configuration_delegates');
+        Route::get('/delegates/participated/{delegate}', [DelegateController::class, 'participated'])->name('delegates.participated');
         Route::resource('listerners', ListernerController::class)->middleware('can:configuration_listerners');
         Route::resource('commissions', CommissionController::class)->middleware('can:configuration_commissions');
     });

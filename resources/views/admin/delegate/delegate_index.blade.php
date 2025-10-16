@@ -18,9 +18,6 @@
                         <x-table.th>Segmento</x-table.th>
                         <x-table.th>Origem</x-table.th>
                         <x-table.th>Contato</x-table.th>
-                        <x-table.th>Whatsapp?</x-table.th>
-                        <x-table.th>Votos</x-table.th>
-                        <x-table.th>Resultado</x-table.th>
                         <x-table.th>Participou</x-table.th>
                         <x-table.th>Ações</x-table.th>
                     </tr>
@@ -49,24 +46,11 @@
                                 {{ $delegate->contact }}
                             </x-table.td>
 
-                            <!-- Whatsapp -->
-                            <x-table.td class="py-3.5 text-center text-sm text-gray-700">
-                                <p class=" rounded-full py-1 text-xs {{ $delegate->is_whatsapp ? 'bg-green-700 text-green-100' : 'bg-red-700 text-red-100' }}">{{ $delegate->is_whatsapp ? 'Sim' : 'Não' }}</p>
-                            </x-table.td>
-
-                            <!-- Votos -->
-                            <x-table.td class="py-3.5 text-center text-sm text-gray-700">
-                                {{ $delegate->votes_count }}
-                            </x-table.td>
-
-                            <!-- Resultado -->
-                            <x-table.td class="py-3.5 text-center text-sm text-gray-700">
-                                {{ $delegate->type }}
-                            </x-table.td>
-
                             <!-- Participated -->
                             <x-table.td class="py-3.5 text-center text-sm text-gray-700">
-                                <p class=" rounded-full py-1 text-xs {{ $delegate->participated ? 'bg-green-700 text-green-100' : 'bg-red-700 text-red-100' }}">{{ $delegate->participated ? 'Sim' : 'Não' }}</p>
+                                <a href="{{ route('delegates.participated', $delegate->id) }}">
+                                    <p class="rounded-full py-1 text-xs {{ $delegate->participated ? 'bg-green-700 text-green-100' : 'bg-red-700 text-red-100' }}">{{ $delegate->participated ? 'Sim' : 'Não' }}</p>
+                                </a>
                             </x-table.td>
 
                             <!-- Ações -->

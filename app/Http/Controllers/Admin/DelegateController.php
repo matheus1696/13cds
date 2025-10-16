@@ -93,4 +93,16 @@ class DelegateController extends Controller
             ->route('delegates.index')
             ->with('error', 'Página não encontrada');
     }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function participated(Delegate $delegate): RedirectResponse
+    {
+        //
+        $delegate->participated = !$delegate->participated;
+        $delegate->update();
+
+        return redirect()->back()->with('success', 'Atualização realizada com sucesso');
+    }
 }

@@ -24,7 +24,7 @@ class CommissionUpdateRequest extends FormRequest
     {
         return [
             'cpf' => [
-                'nullable',
+                'required',
                 'cpf',
                 'formato_cpf',
                 'string',
@@ -32,8 +32,8 @@ class CommissionUpdateRequest extends FormRequest
                 Rule::unique('commissions', 'cpf')->ignore($this->commission->id),
             ],
             'name' => ['required', 'string', 'max:255', 'regex:/^[\pL\s\-]+$/u'],
-            'contact' => ['required', 'celular_com_ddd', 'string', 'max:15'],
-            'is_whatsapp' => ['required', 'boolean'],
+            'contact' => ['nullable', 'celular_com_ddd', 'string', 'max:15'],
+            'is_whatsapp' => ['nullable', 'boolean'],
         ];
     }
 }
