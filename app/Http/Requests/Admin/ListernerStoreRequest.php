@@ -23,10 +23,10 @@ class ListernerStoreRequest extends FormRequest
     {
         return [
             //
-            'cpf' => ['nullable', 'cpf', 'formato_cpf', 'string', 'size:14', 'unique:listerners,cpf'],
+            'cpf' => ['required', 'cpf', 'formato_cpf', 'string', 'size:14', 'unique:listerners,cpf'],
             'name' => ['required', 'string', 'max:255', 'regex:/^[\pL\s\-]+$/u'],
-            'contact' => ['required', 'celular_com_ddd', 'string', 'max:15'],
-            'is_whatsapp' => ['required', 'boolean'],
+            'contact' => ['nullable', 'celular_com_ddd', 'string', 'max:15'],
+            'is_whatsapp' => ['nullable', 'boolean'],
         ];
     }
 }
