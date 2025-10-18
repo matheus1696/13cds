@@ -116,7 +116,6 @@ class PublicController extends Controller
 
         // Se houver CPF no GET, realiza a validação e busca
         if ($request->has('cpf')) {
-            
             // Validação específica para este contexto
             $validator = Validator::make($request->all(), [
                 'cpf' => ['required', 'string', 'cpf'],
@@ -136,6 +135,7 @@ class PublicController extends Controller
             $commissions = Commission::where('cpf', $cpf)->get();
             $listerner = Listerner::where('cpf', $cpf)->get();
 
+            
             if ($delegates->isEmpty() && $commissions->isEmpty() && $listerner->isEmpty()) {
                 $empty = true;
             }
