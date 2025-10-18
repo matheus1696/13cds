@@ -188,7 +188,7 @@ class PublicController extends Controller
     {
         $listener = Listerner::findOrFail($id);
 
-        $pdf = Pdf::loadView('public.certificates.certificates_listener', compact('listener'))
+        $pdf = Pdf::loadView('public.certificates.certificates_listerner', compact('listener'))
             ->setPaper('a4', 'landscape')
             ->setOption('margin-top', 0)
             ->setOption('margin-bottom', 0)
